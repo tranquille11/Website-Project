@@ -1,0 +1,48 @@
+{% extends 'WebsiteBundle::base.html.twig' %}
+{% block content %}
+    <div class="main">
+        <div class="innermain">
+            <div class="consent">
+                <h3>SIZE CHART</h3>
+            </div>
+            <h4> Women</h4>
+            &nbsp;
+            <table class="table table-bordered">
+                <tr class="header">
+                    <th>US SIZES</th>
+                    <th>EURO SIZES</th>
+                    <th>UK SIZES</th>
+                    <th>INCHES</th>
+                    <th>CM</th>
+                </tr>
+                {% for item in womensizes %}
+                <tr>
+                    <td>{{ item.US }} </td>
+                    <td>{{ item.EURO }} </td>
+                    <td>{{ item.UK }} </td>
+                    <td>{{ item.INCHES }} </td>
+                    <td>{{ item.CM }} </td>
+                    {% endfor %}
+            </table>
+            <h4> Men </h4>
+            &nbsp;
+            <table class="table table-bordered">
+                <tr class="header">
+                    <th>US SIZES</th>
+                    <th>EURO SIZES</th>
+                    <th>UK SIZES</th>
+                    <th>INCHES</th>
+                    <th>CM</th>
+                </tr>
+                {% for item in mensizes %}
+                <tr>
+                    <td>{{ item.US }} </td>
+                    <td>{{ item.EURO }} </td>
+                    <td>{{ item.UK }} </td>
+                    <td>{{ item.INCHES }} </td>
+                    <td>{{ item.CM }} </td>
+                    {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

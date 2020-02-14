@@ -1,0 +1,228 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<div class="container-fluid" id="div">
+    <div id="div2">
+      <a href="{{ path('home') }}"> <img src="{{ asset('bundles/website/images/big-logo-sm.jpg') }}" class="d-inline-block align-top" id="big_logo" alt="logo"> </a>
+    </div>
+    <div id="rightside">
+        <div class="hdr">
+            <div id="innerdivs">
+                <i class="fas fa-phone fa-lg"></i>
+            </div>
+            <div>
+                <span id="text"> Monday-Friday: 9AM-5PM EST</span>
+                <br>
+                <span id="text"> Phone: 0745774465 </span>
+            </div>
+        </div>
+        <div class="hdr">
+            <div id="innerdivs">
+                <i class="fas fa-user fa-lg" id="user_icon"></i>
+            </div>
+            <div>
+                <span id="text"> <a href="#" class="onwhite text-decoration-none">Sign In</a> </span>
+                <br>
+                <span id="text"> <a href="#" class="onwhite text-decoration-none">Join Now</a></span>
+            </div>
+        </div>
+        <div class="hdr">
+            <div id="innerdivs">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+            </div>
+            <div>
+                <span id="text"> <a href="#" class="onwhite text-decoration-none"> Shopping Cart </a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="divnav">
+    <nav class="navbar navbar-expand-lg" id="navdiv">
+        <div class="centered">
+            <div class="nav_inner_div">
+                <div class="inner_div1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    What's new
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item white" href="#">Women's</a>
+                                    <a class="dropdown-item white" href="#">Men's</a>
+                                    <a class="dropdown-item white" href="#">Kids</a>
+                                    <a class="dropdown-item white" href="#">Pre-order</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Best sellers</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Men's
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item white" href="#">Action</a>
+                                    <a class="dropdown-item white" href="#">Another action</a>
+                                    <a class="dropdown-item white" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Women's
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item white" href="#">Action</a>
+                                    <a class="dropdown-item white" href="#">Another action</a>
+                                    <a class="dropdown-item white " href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Kids
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item white" href="#">Action</a>
+                                    <a class="dropdown-item white" href="#">Another action</a>
+                                    <a class="dropdown-item white" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sale</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Clearance</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner_div2">
+                    <form class="form-inline my-2 my-lg-1" method="get">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                               id="search">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
+                                id="search-btn"><span>Search</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+
+<div class="straight-line">
+</div>
+<div class="footer">
+    <div class="footer-content">
+        <div class="content">
+            <h5 style="font-weight: bold"> CUSTOMER SERVICE</h5>
+            <ul class="footer-list">
+                <li><a href="{{ path('faq')}}" class="onwhite">FAQ</a></li>
+                <li><a href="{{ path('shipping-policy')}}" class="onwhite">Shipping
+                        Policy</a></li>
+                <li><a href="{{ path('return-policy') }}" class="onwhite">Return Policy</a></li>
+                <li><a href="{{ path('size-chart') }}" class="onwhite">Shoe Size Chart</a></li>
+                <li><a href="{{ path('contact') }}" class="onwhite">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h5 style="font-weight: bold"> ABOUT THE COMPANY</h5>
+            <ul class="footer-list">
+                <li><a href="{{ path('about') }}" class="onwhite">About Vlad Ltd.</a></li>
+                <li><a href="{{ path('careers') }}" class="onwhite">Careers</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h5 style="font-weight: bold"> SITE TERMS</h5>
+            <ul class="footer-list">
+                <li><a href="{{ path('terms-of-use') }}" class="onwhite">Terms Of Use</a></li>
+                <li><a href="{{ path('terms-of-sale') }}" class="onwhite">Terms Of
+                        Sale</a></li>
+                <li><a href="{{ path('privacy-policy') }}" class="onwhite">Privacy
+                        Policy</a></li>
+                <li><a href="{{ path('promotion-rules')}}" class="onwhite">Promotion Terms & Conditions</a></li>
+                <li><a href="{{ path('consent-and-release-agreement') }}" class="onwhite">Consent And Release Agreement</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="under-footer-line">
+    <div class="straight-line2">
+    </div>
+</div>
+
+<div class="below-footer">
+    <div class="footer-info">
+        <div class="actual_info">
+            <span> &copy;Vlad Ltd.</span>
+        </div>
+        <div class="actual_info2">
+            <a href="mailto:evlad3201@gmail.com" class="onwhite">evlad3201@gmail.com</a>
+        </div>
+        <div class="actual_info2">
+            <a href="http://www.facebook.com" class="onwhite" target="_blank">
+            <span class="fa-stack fa-1x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+            <a href="http://www.twitter.com" class="onwhite" target="_blank">
+            <span class="fa-stack fa-1x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+            <a href="http://www.instagram.com" class="onwhite" target="_blank">
+            <span class="fa-stack fa-1x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+            <a href="http://www.youtube.com" class="onwhite" target="_blank">
+            <span class="fa-stack fa-1x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/0a002bf5d6.js"></script>
+</html>
+

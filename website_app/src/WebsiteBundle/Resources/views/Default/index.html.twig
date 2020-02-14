@@ -1,0 +1,81 @@
+{% extends 'WebsiteBundle::base.html.twig' %}
+{% block content %}
+    <div class="right_under_header">
+        <div class="part1_underheader">
+            <a href="#"><img src="{{ asset('bundles/website/images/model-front-page.jpg') }}" alt=""></a>
+            <div id="shop_now">
+                <button id="buttonn" onClick="window.open('http://www.google.com');"><a href="#" id="shop_a"> SHOP NOW</a>
+                </button>
+            </div>
+            <div id="shop_msg">
+                <h1 id="shop_txt"><a href="#" id="advert_text"> Valentine's day is
+                        approaching </a></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="innermain">
+            <div class="front-categories">
+                <div class="in-front-categories">
+                    <a href="#"> <img src="{{ asset('bundles/website/images/front-page-girl.jpg') }}" alt=""> </a>
+                </div>
+                <div class="in-front-categories">
+                    <a href="#"> <img src="{{ asset('bundles/website/images/male-model-frontpage.jpg') }}" alt=""></a>
+                </div>
+                <div class="in-front-categories">
+                    <a href="#"> <img src="{{ asset('bundles/website/images/kids-model-frontpage.jpg') }}" alt=""></a>
+                </div>
+            </div>
+            <div class="category-text1">
+                <div class="shop_text shop_text1">
+                    <h5 class="category-name2"><a href="#" class="onwhite text-decoration-none"> Shop Women's</a></h5>
+                </div>
+                <div class="shop_text shop_text2">
+                    <h5 class="category-name2"><a href="#" class="onwhite text-decoration-none"> Shop Men's</a></h5>
+                </div>
+                <div class="shop_text shop_text3">
+                    <h5 class="category-name2"><a href="#" class="onwhite text-decoration-none"> Shop Kids'</a></h5>
+                </div>
+            </div>
+            <div>
+                <div class="instagram_text">
+                    <h4 class="category-name2"> Our instagram models</h4>
+                </div>
+            </div>
+            <div class="front-instagram-models" id="instagram-models">
+                <div class="insta-models">
+                    <a href="http://www.instagram.com/gabrieladegraaf/" target="_blank" id="insta-frontpage"> <img src="{{ asset('bundles/website/images/insta-model1.png') }}" alt="insta-model"></a>
+                </div>
+                <div class="insta-models">
+                    <a href="http://www.instagram.com/wiepboers" target="_blank" id="insta-frontpage"><img src="{{ asset('bundles/website/images/insta-model2.png') }}" alt="insta-model"></a>
+                </div>
+                <div class="insta-models">
+                    <a href="http://www.instagram.com/themrsgibby/" target="_blank" id="insta-frontpage"><img src="{{ asset('bundles/website/images/insta-model3.jpg') }}" alt="insta-model"></a>
+                </div>
+                <div class="insta-models">
+                    <a href="http://www.instagram.com/_liquidpyro" target="_blank" id="insta-frontpage"> <img src="{{ asset('bundles/website/images/insta-model4.jpg') }}" alt="insta-model"></a>
+                </div>
+            </div>
+            <div class="category-text2">
+                <div class="models_text" id="insta_text1">
+                    <h6 class="category-name2"><a href="http://www.instagram.com/gabrieladegraaf/" class="onwhite text-decoration-none"
+                                                  target="_blank">@gabrieladegraaf</a></h6>
+                </div>
+                <div class="models_text" id="insta_text2">
+                    <h6 class="category-name2"><a href="http://www.instagram.com/wiepboers" class="onwhite text-decoration-none"
+                                                  target="_blank">@wiepboers</a></h6>
+                </div>
+                <div class="models_text" id="insta_text3">
+                    <h6 class="category-name2"><a href="http://www.instagram.com/themrsgibby/" class="onwhite text-decoration-none"
+                                                  target="_blank">@themrsgibby</a></h6>
+                </div>
+                <div class="models_text" id="insta_text4">
+                    <h6 class="category-name2"><a href="http://www.instagram.com/_liquidpyro" class="onwhite text-decoration-none"
+                                                  target="_blank">@_liquidpyro</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="709f4a59-3a0b-47a5-994e-2a55852d61bd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/website_app/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
+    <include_path>
+      <path value="$PROJECT_DIR$/website_app/vendor/composer" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/website_app/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/website_app/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/website_app/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/website_app/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/website_app/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/website_app/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/website_app/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/website_app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/website_app/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/website_app/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/website_app/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/website_app/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/website_app/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/website_app/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/website_app/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/website_app/vendor/fortawesome/font-awesome" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1Xfb4lwFfASuT9cP59UFRqSBOmB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BUC_PHP_S_05_Symfony_EN" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\images" />
+      <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="base.html.twig" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/my_project/website_app/src/WebsiteBundle/Resources/views/base.html.twig" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.base.html.twig" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="709f4a59-3a0b-47a5-994e-2a55852d61bd" name="Default Changelist" comment="" />
+      <created>1581439906647</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581439906647</updated>
+      <workItem from="1581439907785" duration="20454000" />
+      <workItem from="1581462618490" duration="586000" />
+      <workItem from="1581489981111" duration="18676000" />
+      <workItem from="1581575463296" duration="8695000" />
+      <workItem from="1581618021128" duration="9516000" />
+      <workItem from="1581664827619" duration="4687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="111" key="#PHP" timestamp="1581440465702">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="111" key="#PHP/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581440465702" />
+    <state x="718" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581448642486">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="718" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581448642486" />
+    <state x="526" y="191" width="426" height="486" key="FileChooserDialogImpl" timestamp="1581665156999">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="526" y="191" width="426" height="486" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1581665156999" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581449879038" />
+    <state x="260" y="171" width="835" height="375" key="NewPhpClassDialog" timestamp="1581625476241">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="260" y="171" width="835" height="375" key="NewPhpClassDialog/0.0.1366.720@0.0.1366.720" timestamp="1581625476241" />
+    <state x="656" y="252" width="618" height="536" key="find.popup" timestamp="1581450882078">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="252" width="618" height="536" key="find.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581450882078" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1581452057507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581452057507" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581463090757">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581463090757" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/DeleteUploads.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
