@@ -1,0 +1,40 @@
+{% extends 'WebsiteBundle::base.html.twig' %}
+{% block content %}
+
+    <div class="products-main">
+
+        <div class="all-products">
+            <div class="product-header">
+                <h2>Search Results</h2>
+            </div>
+            {% for item in products %}
+                <div>
+                    <div class="product-image">
+                        {% if 'MEN' in item.SKU %}
+                            <a href="men/products/{{ item.name|lower }}" class="prod-img">
+                                <img src="{{ asset
+                                    ('bundles/website/images/men/') }}{{ item
+                                .path }}" alt="photo"> </a>
+                        {% elseif 'FEM' in item.SKU %}
+                            <a href="women/products/{{ item.name|lower }}" class="prod-img">
+                                <img src="{{ asset
+                                    ('bundles/website/images/female/') }}{{ item
+                                .path }}" alt="photo"> </a>
+                        {% else %}
+                            <a href="kids/products/{{ item.name|lower }}" class="prod-img">
+                                <img src="{{ asset
+                                    ('bundles/website/images/kids/') }}{{ item
+                                .path }}" alt="photo"> </a>
+                        {% endif %}
+                    </div>
+                    <div class="product-info-div">
+                        <ul class="product-info">
+                            <li> {{ item.name }}</li>
+                            <li> ${{ item.price }}</li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div
+{% endblock %}

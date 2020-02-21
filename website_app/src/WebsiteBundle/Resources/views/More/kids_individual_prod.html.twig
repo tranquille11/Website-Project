@@ -1,0 +1,48 @@
+{% extends 'WebsiteBundle::base.html.twig' %}
+{% block content %}
+
+    <div class="products-main">
+        <div class="single-product">
+            {% for item in products %}
+                <div class="product-image-individual">
+                    <img src="{{ asset
+                        ('bundles/website/images/kids/') }}{{ item
+                    .path }}" alt="photo">
+                </div>
+                <div class="product-info-individual">
+                    <div class="name"> {{ item.name }}</div>
+                    <div>
+                        <div class="description">
+                            <div style="font-weight: bold; font-size:20px;"> Description:</div>
+                            {{ item.description }}
+                        </div>
+                        <div class="price"> <b style="font-size: 15px;">Price:</b>
+                            ${{ item.price }}
+                        </div>
+                        {% if app.session.get('user') %}
+                            <div class="cart-button">
+                                <form method="post">
+                                    <input type="hidden" name="name" value="{{ item.name }}">
+                                    <input type="hidden" name="price" value="{{ item.price }}">
+                                    <input type="hidden" name="path" value="{{ item.path }}">
+                                    <input type="hidden" name="id" value="{{ item.product_id }}">
+                                    <button class="btn btn-dark" type="submit">
+                                        Add to Cart
+                                    </button>
+                                </form>
+                            </div>
+                        {% endif %}
+                        {% if not app.session.get('user') %}
+                            <div class="cart-button">
+                                <button class="btn btn-dark" type="submit" disabled>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

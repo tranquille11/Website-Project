@@ -1,4 +1,177 @@
 {% extends 'WebsiteBundle::base.html.twig' %}
 {% block content %}
-Careers
+    <div class="main">
+        <div class="main-career">
+            <div class="consent">
+                <h2>VLAD LTD. CAREERS</h2>
+            </div>
+            <h3> JOIN US!</h3>
+            &nbsp;
+            <div class="writing">
+                <p> Vlad Ltd. is about fashion-forward product and great people. We are proud
+                    of
+                    our talented, diverse workforce. Our employees are energized, intelligent
+                    and
+                    passionate about our business and committed to providing excellent customer
+                    service.
+
+                    Vlad Ltd. has employment opportunities in our corporate offices located in
+                    Long Island City, New York as well as our retail stores located throughout
+                    the
+                    country. See what it's like to be a part of our dynamic team!</p>
+            </div>
+            &nbsp;
+            <h4> CURRENT OPENINGS </h4>
+            <div class="innermain-career">
+
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b> Assistant Fashion Director</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location">  Location: New
+                                York, NY</span></div>
+                    </div>
+                </div>
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b> Sales Coordinator</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location">  Location: Long
+                                Island City, NY </span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="innermain-career">
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b> Director of Accounting</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"> <span class="location"> Location:
+                                Washington, WA
+                            </span></div>
+                    </div>
+                </div>
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b> Production Assistant</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location">  Location: Salt
+                                Lake City, UT </span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="innermain-career">
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b> Sr. Financial Analyst, FP&A - Acc. Division </b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location">  Location: Long
+                                Island City, NY</span></div>
+                    </div>
+                </div>
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b> Account Executive</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location">  Location: New
+                                York, NY</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="innermain-career">
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b>Account Associate, International</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location">  Location:
+                                Amsterdam, Netherlands</span></div>
+                    </div>
+                </div>
+                <div class="career">
+                    <div class="inner-career">
+                        <h6><b>Temporary Accounts Receivable Associate</b></h6>
+                    </div>
+                    <div>
+                        <div class="inner-career"><span class="location"> Location: San
+                                Francisco, CA</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="jobform">
+                <h4> Job Application Form</h4>
+            </div>
+            <div class="contact-form">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname"
+                                   placeholder="First name" name="firstName">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" id="lastname"
+                                   placeholder="Last name" name="lastName">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Email</label>
+                            <input type="text" class="form-control" id="inputEmail"
+                                   placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPhone">Phone number</label>
+                            <input type="text" class="form-control" id="inputPhone"
+                                   placeholder="Phone number" name="phoneNumber">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleFormControlSelect1">Career choice</label>
+                            <select class="form-control" id="exampleFormControlSelect1"
+                                    name="options">
+                                <option>Select career choice</option>
+                                <option value="Assistant Fashion Director">Assistant Fashion
+                                    Director
+                                </option>
+                                <option value="Sales Coordinator">Sales Coordinator</option>
+                                <option value="Director of Accounting">Director of
+                                    Accounting
+                                </option>
+                                <option value="Production Assistant">Production Assistant
+                                </option>
+                                <option value="Sr. Financial Analyst, FP&A - Acc. Division">Sr.
+                                    Financial Analyst, FP&A - Acc. Division
+                                </option>
+                                <option value="Account Executive">Account Executive</option>
+                                <option value="Account Associate, International">Account
+                                    Associate, International
+                                </option>
+                                <option value="Temporary Accounts Receivable Associate">
+                                    Temporary Accounts Receivable Associate
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="resume">Resume</div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1"></label>
+                        <input type="file" class="form-control-file" name="file"
+                               id="exampleFormControlFile1">
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                            id="career_button">Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

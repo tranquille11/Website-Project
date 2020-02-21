@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+          rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
+    <title>{% block title %} Checkout {% endblock %}</title>
+</head>
+{% if app.session.get('shopping_cart') %}
+<div class="main-checkout">
+    <div class="innermain-checkout">
+        <div class="checkout-left">
+            <div class="checkout-header">
+                <h1> VLAD LTD</h1>
+            </div>
+            <form method="post">
+                <div class="form-row checkout">
+                    <div class="col-md-5 mb-2">
+                        <label for="validationFirstName"></label>
+                        <input type="text" class="form-control" placeholder="First name"
+                               id="validationFirstName" name="firstName" required>
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <label for="validationLastName"></label>
+                        <input type="text" class="form-control" id="validationLastName"
+                               placeholder="Last name"  name="lastName"
+                               required>
+                    </div>
+                </div>
+                <div class="form-row checkout">
+                    <div class="col-md-10 mb-2">
+                        <label for="validationEmail"></label>
+                        <input type="email" class="form-control" id="validationEmail"
+                               placeholder="Email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row checkout">
+                    <div class="col-md-10 mb-2">
+                        <label for="validationAddress1"></label>
+                        <input type="text" class="form-control" id="validationAddress1"
+                               placeholder="Address" name="address1" required>
+                    </div>
+                </div>
+
+                <div class="form-row checkout">
+                    <div class="col-md-10 mb-2">
+                        <label for="validationAddress2"></label>
+                        <input type="text" class="form-control" id="validationAddress2"
+                               placeholder="Apartment, suite etc. (optional)" name="address2">
+                    </div>
+                </div>
+
+                <div class="form-row checkout">
+                    <div class="col-md-4 mb-2">
+                        <label for="validationCity"></label>
+                        <input type="text" class="form-control" id="validationCity"
+                               placeholder="City" name="city" required>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label for="validationState"></label>
+                        <input type="text" class="form-control" id="validationState"
+                               placeholder="State" name="state" required>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <label for="validationZip"></label>
+                        <input type="text" class="form-control" id="validationZip"
+                               placeholder="Zip code" name="zipcode" required>
+                    </div>
+                </div>
+                <div class="place-order-button">
+                    <button class="checkout-btn" type="submit" name="place_order">Place
+                        Order</button>
+                </div>
+            </form>
+        </div>
+        <div class="checkout-right">
+            {% set total = 0 %}
+            <div class="wrapper">
+                {% for item in cart %}
+                    {% set total = total + (item.price * item.qty) %}
+                    {% set itemPrice = item.price * item.qty %}
+
+                    <div class="checkout-right-content">
+                        <div class="checkout-content picture">
+                            <img src="{{ item.path }}" alt="photo">
+                        </div>
+                        <div class="checkout-content second">
+                            <span style="font-weight: bold; font-size:16px">{{ item.name }}</span>
+                        </div>
+                        <div class="checkout-content last-two">
+                            <div class="circle">{{ item.qty }}</div>
+                        </div>
+                        <div class="checkout-content last-two">
+                            <span> ${{ item.price|number_format(2) }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="checkout-total">
+                <div>
+                    <span id="total">Total</span>
+                </div>
+                <div>
+                    <span id="amount">${{ total|number_format(2) }}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endif %}
+{% if app.session.get('shopping_cart') %}
+{% endif %}
+</html>

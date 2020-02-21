@@ -1,0 +1,51 @@
+{% block content %}
+    <html lang="en">
+    <head>
+        <style>
+            table, td, th {
+                border: 1.5px solid black;
+                border-collapse: collapse;
+                text-align: left;
+            }
+
+            th {
+                background-color: rgba(82, 191, 180,0.4);
+            }
+
+            table {
+                width: fit-content;
+            }
+        </style>
+    </head>
+    <div>
+        <p>Hello,</p>
+        <p> Please take a look at the resume attached and reach out to this person. </p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Phone number</th>
+                <th>Email</th>
+                <th>Career option</th>
+            </tr>
+            <tr>
+                <td>{{ clientFirstName }}</td>
+                <td>{{ clientLastName }}</td>
+                <td>{{ phoneNumber }}</td>
+                <td>{{ clientEmail }}</td>
+                <td>{{ careerOption }}</td>
+            </tr>
+        </table>
+    </div>
+    &nbsp;
+    <p>------------------------------------------</p>
+    <div style="line-height: 4px">
+        <p> Sincerely,</p>
+        <p> Vlad Ltd. </p>
+        <p> Phone: 0745774465</p>
+        <p> Email: evlad3201@gmail.com</p>
+        <div>
+        </div>
+    </div>
+    </html>
+{% endblock %}

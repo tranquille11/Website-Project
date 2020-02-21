@@ -1,0 +1,28 @@
+{% extends 'WebsiteBundle::base.html.twig' %}
+{% block content %}
+
+    <div class="products-main">
+
+        <div class="all-products">
+            <div class="product-header">
+                <h2>MEN - SNEAKERS</h2>
+            </div>
+            {% for item in products %}
+                <div>
+                    <div class="product-image">
+                        <a href="products/{{ item.prodName|lower }}" class="prod-img">
+                            <img src="{{ asset
+                                ('bundles/website/images/men/') }}{{ item
+                            .path }}" alt="photo"> </a>
+                    </div>
+                    <div class="product-info-div">
+                        <ul class="product-info">
+                            <li> {{ item.prodName }}</li>
+                            <li> ${{ item.prodPrice }}</li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div
+{% endblock %}

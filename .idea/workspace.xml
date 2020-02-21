@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="709f4a59-3a0b-47a5-994e-2a55852d61bd" name="Default Changelist" comment="" />
+    <list default="true" id="709f4a59-3a0b-47a5-994e-2a55852d61bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/career_email.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/checkout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/logout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/my_account.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/search.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/shopping_cart.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/best_sellers.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_all.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_boys.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_girls.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_individual_prod.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_all.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_boots.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_dress.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_individual_prod.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_sneakers.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_all.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_booties.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_boots.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_individual_prod.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_sandals.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_sneakers.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/DeleteUploads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/Mailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/Mailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/Uploads.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/careers.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/careers.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/privacy_policy.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/privacy_policy.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/shipping_policy.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/shipping_policy.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/size_chart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/size_chart.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/terms_of_sale.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/terms_of_sale.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/terms_of_use.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/terms_of_use.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +60,10 @@
       <executable />
     </execution>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
     <include_path>
       <path value="$PROJECT_DIR$/website_app/vendor/composer" />
       <path value="$PROJECT_DIR$/website_app/vendor/doctrine/annotations" />
@@ -64,15 +114,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BUC_PHP_S_05_Symfony_EN" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proj" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website_app/web/bundles/website" />
       <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\images" />
       <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website_app/web/bundles/website/images/kids" />
+      <recent name="$PROJECT_DIR$/website_app/web/bundles/website/email_twigs" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,6 +159,23 @@
       <workItem from="1581575463296" duration="8695000" />
       <workItem from="1581618021128" duration="9516000" />
       <workItem from="1581664827619" duration="4687000" />
+      <workItem from="1581682899535" duration="3023000" />
+      <workItem from="1581707709589" duration="9545000" />
+      <workItem from="1581796433393" duration="5294000" />
+      <workItem from="1581801872742" duration="4678000" />
+      <workItem from="1581843370268" duration="8950000" />
+      <workItem from="1581856315479" duration="274000" />
+      <workItem from="1581864936334" duration="11664000" />
+      <workItem from="1581881254811" duration="28413000" />
+      <workItem from="1581976480961" duration="390000" />
+      <workItem from="1581976915434" duration="665000" />
+      <workItem from="1582009411952" duration="17409000" />
+      <workItem from="1582048655012" duration="13015000" />
+      <workItem from="1582094587579" duration="30235000" />
+      <workItem from="1582131019143" duration="19898000" />
+      <workItem from="1582181202267" duration="28852000" />
+      <workItem from="1582214697410" duration="22855000" />
+      <workItem from="1582269344367" duration="6450000" />
     </task>
     <servers />
   </component>
@@ -112,40 +187,57 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="111" key="#PHP/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581440465702" />
+    <state x="140" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582134499542">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="140" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.720@0.0.1366.720" timestamp="1582134499542" />
+    <state x="289" y="163" width="778" height="392" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582018420183">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="289" y="163" width="778" height="392" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.720@0.0.1366.720" timestamp="1582018420183" />
+    <state x="456" y="77" width="453" height="564" key="#com.intellij.ide.util.MemberChooser" timestamp="1582208585223">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="456" y="77" width="453" height="564" key="#com.intellij.ide.util.MemberChooser/0.0.1366.720@0.0.1366.720" timestamp="1582208585223" />
+    <state x="415" y="107" width="526" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581865035967">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="415" y="107" width="526" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.720@0.0.1366.720" timestamp="1581865035967" />
+    <state x="415" y="116" width="526" height="486" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582201268151">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="415" y="116" width="526" height="486" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1582201268151" />
     <state x="718" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581448642486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581448642486" />
-    <state x="526" y="191" width="426" height="486" key="FileChooserDialogImpl" timestamp="1581665156999">
+    <state x="526" y="191" width="426" height="486" key="FileChooserDialogImpl" timestamp="1582183647179">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="526" y="191" width="426" height="486" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1581665156999" />
+    <state x="526" y="191" width="426" height="486" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1582183647179" />
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581449879038" />
     <state x="260" y="171" width="835" height="375" key="NewPhpClassDialog" timestamp="1581625476241">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="260" y="171" width="835" height="375" key="NewPhpClassDialog/0.0.1366.720@0.0.1366.720" timestamp="1581625476241" />
-    <state x="656" y="252" width="618" height="536" key="find.popup" timestamp="1581450882078">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="171" y="0" key="SettingsEditor" timestamp="1582057565318">
+      <screen x="0" y="0" width="1366" height="720" />
     </state>
+    <state x="171" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1582057565318" />
+    <state x="467" y="142" width="709" height="578" key="find.popup" timestamp="1582018394178">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="467" y="142" width="709" height="578" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1582018394178" />
     <state x="656" y="252" width="618" height="536" key="find.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581450882078" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1581452057507">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="438" y="166" key="run.anything.popup" timestamp="1581866358711">
+      <screen x="0" y="0" width="1366" height="720" />
     </state>
+    <state x="438" y="166" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1581866358711" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581452057507" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581463090757">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="443" y="156" width="672" height="470" key="search.everywhere.popup" timestamp="1582205238201">
+      <screen x="0" y="0" width="1366" height="720" />
     </state>
+    <state x="443" y="156" width="672" height="470" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1582205238201" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581463090757" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/DeleteUploads.php</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

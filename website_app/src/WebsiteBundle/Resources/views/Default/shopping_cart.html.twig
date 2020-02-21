@@ -1,0 +1,48 @@
+{% extends 'WebsiteBundle::base.html.twig' %}
+{% block content %}
+
+    <div class="header-cart">
+        <h2> Your cart </h2>
+    </div>
+    <div class="main-cart">
+
+        {% set total = 0 %}
+        {% for item in cart %}
+            {% set total = total + (item.price * item.qty) %}
+            {% set itemPrice = item.price * item.qty %}
+            <div class="innermain-cart">
+                <div class="cart-content">
+                    <img src="{{ item.path }}" alt="photo">
+                </div>
+                <div class="cart-content">
+                    <span style="font-weight: bold; font-size:20px">{{ item.name }}</span>
+                </div>
+                <div class="cart-content">
+                    <span>Quantity: {{ item.qty }}</span>
+                </div>
+                <div class="cart-content">
+                    <span> ${{ itemPrice|number_format(2) }}</span>
+                </div>
+                <form method="post">
+                    <div class="cart-content">
+                        <button class="delete_item" type="submit" name="delete">
+                            <i class="fa fa-trash fa-2x"></i>
+                        </button>
+                    </div>
+                    <input type="hidden" name="productName" value="{{ item.name }}">
+                </form>
+            </div>
+        {% endfor %}
+        {% if app.session.get('shopping_cart') %}
+            <div class="total">
+            <span id="total"
+                  style="font-size:22px; font-weight: bold">Total: ${{ total|number_format(2) }}</span>
+                <form action="{{ path('checkout') }}">
+                    <button class="checkout-btn" type="submit">
+                        CHECKOUT
+                    </button>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
