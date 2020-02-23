@@ -15,7 +15,6 @@ use WebsiteBundle\DependencyInjection\Mailer;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use WebsiteBundle\Entity\Orders;
 use WebsiteBundle\Entity\Orders_Items;
-use WebsiteBundle\Entity\User;
 
 
 class DefaultController extends Controller
@@ -88,13 +87,15 @@ class DefaultController extends Controller
 
         $womenSizes = new Converter(__DIR__ . "../../Resources/public/sizechart/women-sizes.txt");
         $size1 = $womenSizes->convert()->getData();
+        $header = $womenSizes->getHeader();
         $menSizes = new Converter(__DIR__ . "../../Resources/public/sizechart/men-sizes.txt");
         $size2 = $menSizes->convert()->getData();
 
         return $this->render('WebsiteBundle:Default:size_chart.html.twig',
             [
                 'womensizes' => $size1,
-                'mensizes' => $size2
+                'mensizes'   => $size2,
+                'header'     => $header
             ]);
     }
 
@@ -137,7 +138,7 @@ class DefaultController extends Controller
         if ($request->getMethod() === 'POST' &&
             strlen($name) > 0 &&
             strlen($surname) > 0 &&
-            strlen($clientEmail) > 4 &&
+            strlen($clientEmail) > 5 &&
             strlen($phoneNumber) > 0 &&
             $careerOption != '' &&
             !empty($uploadedFile)) {
@@ -238,8 +239,7 @@ class DefaultController extends Controller
         $userId = $session->get('user');
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository('WebsiteBundle:Orders');
-
-
+        
         return $this->render('WebsiteBundle:Default:my_account.html.twig');
     }
 
@@ -371,7 +371,6 @@ class DefaultController extends Controller
                 $repo = $entityManager->getRepository('WebsiteBundle:Product');
                 $info [] = $repo->getBestSellers($val);
             }
-
         }
 
         $itemList = [];

@@ -85,7 +85,7 @@ class MenController extends Controller
 
     public function bootsAction()
     {
-        $categoryId = 9;
+        $categoryId = 10;
         $path = 'sm.jpg';
 
         $em = $this->getDoctrine()->getManager();
@@ -103,7 +103,7 @@ class MenController extends Controller
 
     public function sneakersAction()
     {
-        $categoryId = 10;
+        $categoryId = 11;
         $path = 'sm.jpg';
 
         $em = $this->getDoctrine()->getManager();
@@ -120,7 +120,7 @@ class MenController extends Controller
 
     public function dressAction()
     {
-        $categoryId = 11;
+        $categoryId = 12;
         $path = 'sm.jpg';
 
         $em = $this->getDoctrine()->getManager();

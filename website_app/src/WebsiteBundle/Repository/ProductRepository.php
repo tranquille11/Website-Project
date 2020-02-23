@@ -24,6 +24,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         try {
             $stmt = $conn->prepare($sql);
         } catch (DBALException $e) {
+            echo $e->getMessage();
         }
 
         $stmt->bindValue(1, $sku.'%');
@@ -40,7 +41,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
 
         $sql = "SELECT product.id AS 'prodId', 
                 product.name AS 'prodName', 
-                product.price as 'prodPrice', 
+                product.price AS 'prodPrice', 
                 categories.id, photo.id, path 
                 FROM `product` RIGHT JOIN `categories` 
                 on product.category_id = categories.id 
@@ -74,6 +75,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
             $stmt->bindValue(1, $productName);
             $stmt->bindValue(2, '%'.$path);
         } catch (DBALException $e) {
+            echo $e->getMessage();
         }
 
         $stmt->execute();
@@ -91,6 +93,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
             $stmt = $conn->prepare($sql);
             $stmt->bindValue(1, $category.'%');
         } catch (DBALException $e) {
+            echo $e->getMessage();
         }
 
         $stmt->execute();
@@ -108,6 +111,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
             $stmt = $conn->prepare($sql);
             $stmt->bindValue(1,'%'.$searchParam.'%');
         } catch (DBALException $e) {
+            echo $e->getMessage();
         }
 
         $stmt->execute();
@@ -125,9 +129,24 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
             $stmt = $conn->prepare($sql);
             $stmt->bindValue(1,$id);
         } catch (DBALException $e) {
+            echo $e->getMessage();
         }
 
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    public function getLastSKU()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+        $sql = "SELECT `SKU`, `name` FROM `product` ORDER BY id DESC LIMIT 1";
+
+        try {
+            $stmt = $conn->prepare($sql);
+        }catch (DBALException $e){
+            echo $e->getMessage();
+        }
+        $stmt->execute();
+        return $stmt->fetch();
     }
 }

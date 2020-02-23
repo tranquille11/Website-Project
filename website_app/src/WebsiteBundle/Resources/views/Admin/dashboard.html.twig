@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
+    <script src="{{ asset('bundles/website/js/dashboard.js') }}" defer></script>
+    <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
+
+    <title>{% block title %} Admin {% endblock %}</title>
+</head>
+<body>
+<nav class="nav-admin">
+    <div class="header-admin">
+        <span style="margin-left:20px;">VLAD LTD</span>
+    </div>
+</nav>
+<div class="allAdmin">
+    <div class="admin-left-side">
+        <ul class="left-list">
+            <li><i class="fab fa-dashcube icon"></i>
+                <a href="{{ path('dashboard') }}" class="onwhite">Dashboard</a>
+            </li>
+            <li>
+                <i class="fas fa-users icon"></i>
+                <a href="#" class="onwhite customers">Customers</a>
+            </li>
+            <li>
+                <i class="fas fa-user-tag icon"></i>
+                <button class="menu-button">Orders</button>
+                <div class="hidden-menu-block">
+                    <ul class="list-dashboard">
+                        <li><a href="#" class="onwhite">All orders</a></li>
+                        <li><a href="#" class="onwhite">Place order</a></li>
+                        <li><a href="#" class="onwhite">Search order</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-shopping-cart icon"></i>
+                <button class="menu-button">Products</button>
+                <div class="hidden-menu-block">
+                    <ul class="list-dashboard">
+                        <li><a href="{{ path ('products')}}" class="onwhite">All products</a></li>
+                        <li><a href=" {{ path('create-products') }}" class="onwhite">Create product</a></li>
+                        <li><a href="#" class="onwhite">Edit product</a></li>
+                        <li><a href="#" class="onwhite">Delete product</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-percent icon"></i>
+                <button class="menu-button">Discount codes</button>
+                <div class="hidden-menu-block">
+                    <ul class="list-dashboard">
+                        <li><a href="#" class="onwhite">All discounts</a></li>
+                        <li><a href="#" class="onwhite">Create discount</a></li>
+                        <li><a href="#" class="onwhite">Edit discount</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><i class="fas fa-atlas icon"></i>
+                <a href="{{ path('reports') }}" class="onwhite reports">Reports</a>
+            </li>
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

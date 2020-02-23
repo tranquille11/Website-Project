@@ -38,6 +38,7 @@ class Categories
 
     private $subcategories;
 
+
     /**
      * @ORM\ManyToOne(targetEntity="Categories", inversedBy="subcategories")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
@@ -139,6 +140,23 @@ class Categories
     {
         $this->subcategory_name = $subcategory_name;
     }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getProducts(): ArrayCollection
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param ArrayCollection $products
+     */
+    public function setProducts(ArrayCollection $products): void
+    {
+        $this->products = $products;
+    }
+
 
 
 

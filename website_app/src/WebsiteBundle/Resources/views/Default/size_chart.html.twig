@@ -9,11 +9,12 @@
             &nbsp;
             <table class="table table-bordered">
                 <tr class="header">
-                    <th>US SIZES</th>
-                    <th>EURO SIZES</th>
-                    <th>UK SIZES</th>
-                    <th>INCHES</th>
-                    <th>CM</th>
+                    {% for item in header %}
+                        {% if item|length %}
+                            <th>{{ item }}</th>
+                        {% endif %}
+                    {% endfor %}
+
                 </tr>
                 {% for item in womensizes %}
                     <tr>
@@ -29,11 +30,11 @@
             &nbsp;
             <table class="table table-bordered">
                 <tr class="header">
-                    <th>US SIZES</th>
-                    <th>EURO SIZES</th>
-                    <th>UK SIZES</th>
-                    <th>INCHES</th>
-                    <th>CM</th>
+                    {% for item in header %}
+                        {% if item|length %}
+                            <th>{{ item }}</th>
+                        {% endif %}
+                    {% endfor %}
                 </tr>
                 {% for item in mensizes %}
                 <tr>

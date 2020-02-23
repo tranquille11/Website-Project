@@ -4,6 +4,8 @@ namespace WebsiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Product
@@ -74,6 +76,7 @@ class Product
     public function __construct()
     {
         $this->photos = new ArrayCollection();
+        $this->cREATEDAT = new DateTime();
     }
 
     /**

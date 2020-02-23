@@ -8,6 +8,7 @@ class Converter
 
     private $path;
     private $separator;
+    private $header;
     private $data;
 
     public function __construct(string $path, $separator = "\s")
@@ -29,13 +30,15 @@ class Converter
             $data[] = $arr[$j];
         }
 
-        $header = array_shift($data);
+        $firstRow = array_shift($data);
+        $this->header = $firstRow;
+
         $newData = [];
         foreach ($data as $item) {
             $obj = [];
             foreach ($item as $k => $v) {
-                if (trim($header[$k])) {
-                    $obj[$header[$k]] = $v;
+                if (trim($firstRow[$k])) {
+                    $obj[$firstRow[$k]] = $v;
                 }
             }
             $newData[] = $obj;
@@ -47,6 +50,11 @@ class Converter
     public function getData()
     {
         return $this->data;
+    }
+
+    public function getHeader()
+    {
+        return $this->header;
     }
 
 
