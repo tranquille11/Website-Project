@@ -79,7 +79,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/size-chart", name="size-chart")
-     *
+     * @Template("WebsiteBundle:Default:size_chart.html.twig")
      */
 
     public function sizeChartAction()
@@ -91,12 +91,12 @@ class DefaultController extends Controller
         $menSizes = new Converter(__DIR__ . "../../Resources/public/sizechart/men-sizes.txt");
         $size2 = $menSizes->convert()->getData();
 
-        return $this->render('WebsiteBundle:Default:size_chart.html.twig',
+        return
             [
                 'womensizes' => $size1,
                 'mensizes'   => $size2,
                 'header'     => $header
-            ]);
+            ];
     }
 
 
@@ -154,15 +154,12 @@ class DefaultController extends Controller
             $email->sendCareerEmailToClient();
             $email->setAttachmentPath($destination . "/" . $fileName);
             $email->sendCareerEmailToHandler();
-            $success = 'Thank you for submitting your application!';
             unlink($destination . "/" . $fileName);
 
-            return $this->render('WebsiteBundle:Default:careers.html.twig',
-                ['success', $success]);
+            return $this->render('WebsiteBundle:Default:careers.html.twig');
         }
 
-        return $this->render('WebsiteBundle:Default:careers.html.twig', ['success' => $success]);
-
+        return $this->render('WebsiteBundle:Default:careers.html.twig');
     }
 
     /**

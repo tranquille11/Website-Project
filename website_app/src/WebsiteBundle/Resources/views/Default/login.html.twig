@@ -33,6 +33,9 @@
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" name="password" class="form-control"
                        placeholder="Password" required>
+                {% if success is defined %}
+                    <p style="color:red; margin-top:0.25em;"> Please enter correct username and password</p>
+                {% endif %}
                 <div id="buttonlogin">
                 <button class="btn btn-lg btn-primary btn-block" type="submit"
                         id="login_button">Sign

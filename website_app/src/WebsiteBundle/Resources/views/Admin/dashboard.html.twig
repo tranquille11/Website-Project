@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
-    <script src="{{ asset('bundles/website/js/dashboard.js') }}" defer></script>
+    <script src="{{ asset('bundles/website/js/admin.js') }}" defer></script>
     <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
 
     <title>{% block title %} Admin {% endblock %}</title>
@@ -47,8 +47,6 @@
                     <ul class="list-dashboard">
                         <li><a href="{{ path ('products')}}" class="onwhite">All products</a></li>
                         <li><a href=" {{ path('create-products') }}" class="onwhite">Create product</a></li>
-                        <li><a href="#" class="onwhite">Edit product</a></li>
-                        <li><a href="#" class="onwhite">Delete product</a></li>
                     </ul>
                 </div>
             </li>

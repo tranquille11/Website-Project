@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\DateTime;
 use WebsiteBundle\Entity\Photo;
 use WebsiteBundle\Entity\Product;
-use WebsiteBundle\DependencyInjection\DateTimeNow;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  * @Route("/admin")
@@ -51,9 +51,53 @@ class AdminController extends Controller
 
     public function productsAction()
     {
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('WebsiteBundle:Product');
+        $products = $repo->getAllProducts();
+        return $this->render('WebsiteBundle:Admin:products.html.twig', ['products'=>$products]);
 
-        return $this->render('WebsiteBundle:Admin:products.html.twig');
+    }
 
+    /**
+     * @Route("/products/edit/{prodName}", methods={"GET","POST"}, defaults={"prodName"="ANSARI"}, name="edit-product")
+     * @Template("WebsiteBundle:Admin:individual_prod.html.twig")
+     * @param Request $request
+     * @param $prodName
+     * @return array
+     */
+    public function oneProductAction(Request $request, $prodName)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('WebsiteBundle:Product');
+        $product = $repo->findOneBy([
+            'name'=>$prodName
+        ]);
+
+        if (isset($_POST['save_changes'])) {
+            $name = strtoupper(trim($request->request->get('name')));
+            $price = trim($request->request->get('price'));
+            $sku = trim($request->request->get('SKU'));
+            $desc = $request->request->get('description');
+
+            $product->setSku($sku);
+            $product->setName($name);
+            $product->setPrice($price);
+            $product->setDescription($desc);
+            $em->flush();
+
+            $url = $this->generateUrl('edit-product');
+            $this->redirect($url);
+        }
+
+        if (isset($_POST['delete_button'])) {
+            $em->remove($product);
+            $em->flush();
+
+            $url = $this->generateUrl('products');
+            $this->redirect($url);
+        }
+
+        return ['product'=>$product];
     }
 
     /**
@@ -70,7 +114,7 @@ class AdminController extends Controller
         $data = $repo->findAll();
 
         $newRepo = $em->getRepository('WebsiteBundle:Product');
-        $lastSKU = $newRepo->getLastSKU();
+        $lastSKU = $newRepo->getLastItem();
 
         if ($request->getMethod() === 'POST') {
             $name = strtoupper(trim($request->request->get('name')));

@@ -1,0 +1,62 @@
+{% extends 'WebsiteBundle:Admin:dashboard.html.twig' %}
+
+{% block content %}
+    <div class="admin-main">
+        <h4 style="margin-top:2em;">Product page</h4>
+        <table class="table-sm table-striped table-responsive table-edit" style="width:80%; margin-top:3em;">
+            <thead>
+            <tr>
+                <th style="width:15%;">Product name</th>
+                <th style="width:10%;">SKU</th>
+                <th style="width:50%;">Description</th>
+                <th style="width:10%;">Price</th>
+                <th style="width:10%;"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.SKU }}</td>
+                <td>{{ product.description }}</td>
+                <td>${{ product.price }}</td>
+                <td>
+                    <button class="btn btn-success btn-editdelete" id="button-edit-product"> Edit</button>
+                    <form style="margin:0;padding:0;" method="post">
+                        <input type="hidden" name="prodName" value="{{ product.name }}">
+                        <input type="submit" value="Delete" class="btn btn-danger btn-editdelete" id="delete_button" name="delete_button">
+                    </form>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+        <div class="hidden-form">
+            <form class="admin-edit-form" method="post">
+                <div class="form-group create-product-form">
+                    <label for="prodName">Product name</label>
+                    <input type="text" class="form-control" id="prodName" placeholder="product name"
+                           name="name" value="{{ product.name }}" required>
+                </div>
+                <div class="form-group create-product-form">
+                    <label for="price">Price</label>
+                        <input type="text" class="form-control" id="price" name="price" placeholder="price" value="{{ product.price }}"
+                               required>
+                </div>
+                <div class="form-group create-product-form">
+                    <label for="sku"> SKU </label>
+                        <input type="text" class="form-control" id="sku" name="SKU" placeholder="SKU" value="{{ product.SKU }}"
+                               required>
+
+                </div>
+                <div class="form-group create-product-form">
+                    <label for="description"> Description</label>
+                    <textarea class="form-control" id="description" rows="3"
+                              placeholder="description" name="description" required>{{ product.description }}</textarea>
+                </div>
+                <div>
+                    <button class="btn btn-success btn-editdelete" type="submit" name="save_changes" id="save_changes">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

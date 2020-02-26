@@ -20,7 +20,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         $sql = "SELECT * FROM `product`
                 LEFT JOIN `photo` on product.id = photo.product_id
                 WHERE SKU LIKE ?
-                AND path LIKE ?";
+                AND path LIKE ? ORDER BY name";
         try {
             $stmt = $conn->prepare($sql);
         } catch (DBALException $e) {
@@ -34,6 +34,23 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         return $stmt->fetchAll();
     }
 
+    public function getAllProducts()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = "SELECT * FROM `product`
+                LEFT JOIN `photo` on product.id = photo.product_id
+                WHERE path LIKE '%sm.jpg' ORDER BY name";
+        try {
+            $stmt = $conn->prepare($sql);
+        } catch (DBALException $e) {
+            echo $e->getMessage();
+        }
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    }
 
     public function getProductsByCategory($categoryId, $path)
     {
@@ -136,10 +153,10 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         return $stmt->fetchAll();
     }
 
-    public function getLastSKU()
+    public function getLastItem()
     {
         $conn = $this->getEntityManager()->getConnection();
-        $sql = "SELECT `SKU`, `name` FROM `product` ORDER BY id DESC LIMIT 1";
+        $sql = "SELECT `SKU`, `name`, `CREATED_AT` FROM `product` ORDER BY id DESC LIMIT 1";
 
         try {
             $stmt = $conn->prepare($sql);

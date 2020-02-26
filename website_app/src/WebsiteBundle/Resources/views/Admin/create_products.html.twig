@@ -5,7 +5,7 @@
         <p style="margin:0; padding:0; margin-top:2em;"><span style=" color:red; font-weight: bold;">Please make sure you increment the SKU number when creating a new product!</span>
         </p>
         {% if lastSKU %}
-        <p style="margin:0; margin-top:1em">Last item created was {{ lastSKU.name }} with SKU '{{ lastSKU.SKU }}'</p>
+            <p style="margin:0; margin-top:1em">Last item created was {{ lastSKU.name }} with SKU <b><u>{{ lastSKU.SKU }}</u></b> on {{ lastSKU.CREATED_AT }}</p>
         {% endif %}
         <form class="admin-product-form" method="post" action="{{ path('create-products') }}">
             <div class="form-group create-product-form">
@@ -38,12 +38,10 @@
                         {% endfor %}
                     </select>
                 </label>
-
             </div>
             <div>
                 <button class="create-product-button" type="submit" name="create_product">Create product</button>
             </div>
-
         </form>
     </div>
 

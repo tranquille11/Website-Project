@@ -20,6 +20,7 @@ class AuthenticationController extends Controller
 
     public function loginViewAction()
     {
+
         return $this->render('WebsiteBundle:Default:login.html.twig');
     }
 
@@ -46,7 +47,8 @@ class AuthenticationController extends Controller
             ]);
 
         if (!$user) {
-            return $this->render('WebsiteBundle:Default:login.html.twig');
+            $success = false;
+            return $this->render('WebsiteBundle:Default:login.html.twig',['success'=>$success]);
         }
 
         $session->set('user', $user->getId());

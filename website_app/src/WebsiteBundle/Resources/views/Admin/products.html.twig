@@ -1,5 +1,43 @@
 {% extends 'WebsiteBundle:Admin:dashboard.html.twig' %}
 
 {% block content %}
-dasdas
+    <div class="admin-main">
+        <h4 style="margin-top:2em;"> All products </h4>
+        <div class="above-product">
+            <div class="empty-picture">Image</div>
+            <div class="admin-text">Product name</div>
+            <div class="admin-text">SKU</div>
+            <div class="price-admin">Price</div>
+            <div class="date">Created on</div>
+            <div class="empty"></div>
+        </div>
+        {% for item in products %}
+            <div class="admin-all-products">
+                {% if 'FEM' in item.SKU %}
+                    <div style="width:50px; height:50px;">
+                        <img src="{{ asset ('bundles/website/images/female/') }}{{ item.path }}" alt="image">
+                    </div>
+                {% elseif 'MEN' %}
+                    <div style="width:50px; height:50px;"><img
+                                src="{{ asset('bundles/website/images/men/') }}{{ item.path }}"
+                                alt="image"></div>
+                {% elseif 'KDG' %}
+                    <div style="width:50px; height:50px;"><img
+                                src="{{ asset('bundles/website/images/kids/girls/') }}{{ item.path }}"
+                                alt="image"></div>
+                {% elseif 'KDB' %}
+                    <div style="width:50px; height:50px;"><img
+                                src="{{ asset('bundles/website/images/kids/boys/') }}{{ item.path }}"
+                                alt="image"></div>
+                {% endif %}
+                <div class="admin-text forma">{{ item.name }}</div>
+                <div class="admin-text forma">{{ item.SKU }}</div>
+                <div class="admin-text price-admin forma">${{ item.price }}</div>
+                <div class="admin-text date forma">{{ item.CREATED_AT }}</div>
+                <a href="products/edit/{{ item.name|lower }}" class="button-href">
+                    <button class="btn btn-dark edit_button">View</button>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
