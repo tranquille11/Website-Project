@@ -16,6 +16,12 @@
     align-items: center;
 }
 
+.search-btn {
+    background:none;
+    border:none;
+    outline:0;
+}
+
 .centered {
     display: flex;
     width: 100%;
@@ -74,27 +80,33 @@
 }
 
 #search {
-    border-radius: 8px;
-    height: 30px;
+    background:none;
     border: none;
+    color:white;
+    border-bottom:1px solid rgba(255,255,255,0.8);
+}
+#search::placeholder {
+    color:white;
 }
 
 #search-btn {
-    padding: 0;
-    height: 30px;
-    width: 80px;
-    text-align: center;
+    color:white;
 }
 
+#search-btn:focus {
+    border:none !important;
+    outline:none !important;
+}
+
+
 #search-btn:hover {
-    border-color: rgba(255, 255, 255, 0.8);
     background-color: black;
-    color: rgba(255, 255, 255, 0.8);
+    color: #2de3d1;
 }
 
 #search:focus {
-    border-radius: 8px;
-    border: rgba(82, 191, 180, 1);
+    border-bottom:1px solid #2de3d1;
+    outline:0 !important;
 }
 
 #shop_msg {
@@ -790,12 +802,12 @@ a {
     display: flex;
     width: 100%;
     flex-direction: row;
-    margin-top: 25px;
-    padding-left: 45px;
-    padding-right: 45px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
 }
 
 .checkout-content {
@@ -803,6 +815,7 @@ a {
     width: 100px;
     height: 100px;
     align-items: center;
+    flex-direction: row;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -811,7 +824,7 @@ a {
     padding-left: 50px;
 }
 
-.checkout-right-content {
+.checkout-right-content{
     display: flex;
     height: auto;
     width: 100%;
@@ -907,11 +920,8 @@ a {
 
 .main-checkout {
     display: flex;
-    margin: 0;
-    padding: 0;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
 }
 
 .line {
@@ -922,10 +932,6 @@ a {
 .innermain-checkout {
     display: flex;
     justify-content: center;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-
 }
 
 .listing {
@@ -935,17 +941,13 @@ a {
 }
 
 .checkout-header {
-    margin-bottom: 50px;
+    margin-top:7em;
 }
 
 .checkout-left {
     display: flex;
     width: 60%;
-    height: 100%;
     flex-direction: column;
-    margin-bottom: 90px;
-    margin-top: 100px;
-
 }
 
 .checkout-left h1 {
@@ -955,7 +957,9 @@ a {
 
 .checkout-right {
     display: flex;
-    min-height: 100vh;
+    min-height:100vh;
+    margin:0;
+    padding:0;
     width: 40%;
     flex-direction: column;
     border-left: 2px solid black;
@@ -985,6 +989,7 @@ a {
 .admin-left-side {
     display:flex;
     min-height: 100%;
+    margin:0;
     width: 15%;
     border-right: 2px solid black;
     padding: 20px;
@@ -1018,6 +1023,28 @@ a {
     margin-bottom:2em;
 }
 
+.arrow:hover{
+    background:none;
+    outline:0;
+}
+
+.arrow:focus{
+    border:none !important;
+    outline:0; !important;
+}
+.pagination {
+    margin-top:2em;
+    margin-bottom:5em;
+}
+
+.page-item a{
+    color:black;
+}
+
+.page-item a:hover {
+    color: black;
+}
+
 .product-admin-header {
     margin-top:1em;
 }
@@ -1033,7 +1060,11 @@ a {
 
 .hidden-form {
     margin-top:2em;
-    width:80%;
+    width:90%;
+}
+
+.form-row {
+    margin-bottom:1em;
 }
 
 .admin-menu {
@@ -1050,7 +1081,6 @@ a {
     height: 100%;
     color: black;
     border-right: 2px solid black;
-
 }
 
 .nav-admin {
@@ -1087,7 +1117,7 @@ a {
 }
 
 .create-product-form input,textarea,select {
-    font-size: 13px !important;
+    font-size: 15px !important;
 }
 
 .create-product-button {
@@ -1179,7 +1209,6 @@ a {
 
 .hidden-form {
     display:none;
-    font-size:13px;
 }
 
 .admin-text {

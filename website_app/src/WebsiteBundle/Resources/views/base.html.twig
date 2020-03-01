@@ -1,19 +1,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+          rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
     <title>{% block title %} Demo Project{% endblock %}</title>
 </head>
 <div class="container-fluid" id="div">
     <div id="div2">
-      <a href="{{ path('home') }}"> <img src="{{ asset('bundles/website/images/big-logo-sm.jpg') }}" class="d-inline-block align-top" id="big_logo" alt="logo"> </a>
+        <a href="{{ path('home') }}"> <img
+                    src="{{ asset('bundles/website/images/big-logo-sm.jpg') }}"
+                    class="d-inline-block align-top" id="big_logo" alt="logo"> </a>
     </div>
     <div id="rightside">
         <div class="hdr">
@@ -57,9 +65,9 @@
         </div>
         <div class="hdr">
             {% if not app.session.get('shopping_cart') %}
-            <div id="innerdivs">
-                <i class="fas fa-shopping-cart fa-lg"></i>
-            </div>
+                <div id="innerdivs">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </div>
             {% endif %}
 
             {% if app.session.get('shopping_cart') %}
@@ -93,73 +101,69 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                   role="button"
+                                   data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
                                     What's new
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item white" href="{{ path
-                                        ('women-newest')
-                                    }}">Women's</a>
-                                    <a class="dropdown-item white" href="{{path('men-newest')
-                                    }}">Men's</a>
-                                    <a class="dropdown-item white" href="{{path('kids-newest')
-                                    }}">Kids</a>
+                                        ('women-newest') }}">Women's</a>
+                                    <a class="dropdown-item white" href="{{ path('men-newest') }}">Men's</a>
+                                    <a class="dropdown-item white" href="{{ path('kids-newest') }}">Kids</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ path ('best-sellers')}}">Best sellers</a>
+                                <a class="nav-link" href="{{ path ('best-sellers') }}">Best
+                                    sellers</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                   role="button"
+                                   data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
                                     Men's
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item white" href="{{ path('men-all')
-                                    }}">All</a>
-                                    <a class="dropdown-item white" href="{{ path('men-boots')
-                                    }}">Boots</a>
+                                    <a class="dropdown-item white"
+                                       href="{{ path('men-all') }}">All</a>
+                                    <a class="dropdown-item white" href="{{ path('men-boots') }}">Boots</a>
                                     <a class="dropdown-item white" href="{{ path
-                                        ('men-sneakers')
-                                    }}">Sneakers</a>
-                                    <a class="dropdown-item white" href="{{ path('men-dress')
-                                    }}">Dress</a>
+                                        ('men-sneakers') }}">Sneakers</a>
+                                    <a class="dropdown-item white" href="{{ path('men-dress') }}">Dress</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                   role="button"
+                                   data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
                                     Women's
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item white" href="{{ path('women-all')
-                                    }}">All</a>
+                                    <a class="dropdown-item white" href="{{ path('women-all') }}">All</a>
                                     <a class="dropdown-item white" href="{{ path
-                                        ('women-sandals')
-                                    }}">Sandals</a>
-                                    <a class="dropdown-item white" href="{{ path('women-boots')
-                                    }}">Boots</a>
+                                        ('women-sandals') }}">Sandals</a>
+                                    <a class="dropdown-item white" href="{{ path('women-boots') }}">Boots</a>
                                     <a class="dropdown-item white" href="{{ path
-                                        ('women-booties')
-                                    }}">Booties</a>
+                                        ('women-booties') }}">Booties</a>
                                     <a class="dropdown-item white " href="{{ path
-                                        ('women-sneakers')
-                                    }}">Sneakers</a>
+                                        ('women-sneakers') }}">Sneakers</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                   role="button"
+                                   data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
                                     Kids
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item white" href="{{ path
-                                        ('kids-boys')
-                                    }}">Boys</a>
+                                        ('kids-boys') }}">Boys</a>
                                     <a class="dropdown-item white" href="{{ path
-                                        ('kids-girls')
-                                    }}">Girls</a>
+                                        ('kids-girls') }}">Girls</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -174,12 +178,14 @@
                 <div class="inner_div2">
                     <form class="form-inline my-2 my-lg-1" method="post" action="{{ path
                         ('search') }}">
-                        <input class="form-control mr-sm-2" type="search"
+                        <input class="mr-sm-2" type="search"
                                placeholder="Search" aria-label="Search" name="search"
                                id="search">
-                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
-                                id="search-btn"><span>Search</span>
-                        </button>
+
+                            <button class="search-btn" type="submit"
+                                    id="search-btn">
+                                <i class="fas fa-search fa-lg"></i>
+                            </button>
                     </form>
                 </div>
             </div>
@@ -189,7 +195,7 @@
 
 
 <body>
-    {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 </body>
 
 
@@ -200,8 +206,8 @@
         <div class="content">
             <h5 style="font-weight: bold"> CUSTOMER SERVICE</h5>
             <ul class="footer-list">
-                <li><a href="{{ path('faq')}}" class="onwhite">FAQ</a></li>
-                <li><a href="{{ path('shipping-policy')}}" class="onwhite">Shipping
+                <li><a href="{{ path('faq') }}" class="onwhite">FAQ</a></li>
+                <li><a href="{{ path('shipping-policy') }}" class="onwhite">Shipping
                         Policy</a></li>
                 <li><a href="{{ path('return-policy') }}" class="onwhite">Return Policy</a></li>
                 <li><a href="{{ path('size-chart') }}" class="onwhite">Shoe Size Chart</a></li>
@@ -223,8 +229,10 @@
                         Sale</a></li>
                 <li><a href="{{ path('privacy-policy') }}" class="onwhite">Privacy
                         Policy</a></li>
-                <li><a href="{{ path('promotion-rules')}}" class="onwhite">Promotion Terms & Conditions</a></li>
-                <li><a href="{{ path('consent-and-release-agreement') }}" class="onwhite">Consent And Release Agreement</a></li>
+                <li><a href="{{ path('promotion-rules') }}" class="onwhite">Promotion Terms &
+                        Conditions</a></li>
+                <li><a href="{{ path('consent-and-release-agreement') }}" class="onwhite">Consent
+                        And Release Agreement</a></li>
             </ul>
         </div>
     </div>

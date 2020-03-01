@@ -34,13 +34,13 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         return $stmt->fetchAll();
     }
 
-    public function getAllProducts()
+    public function getAllProducts($start, $limit)
     {
         $conn = $this->getEntityManager()->getConnection();
 
         $sql = "SELECT * FROM `product`
                 LEFT JOIN `photo` on product.id = photo.product_id
-                WHERE path LIKE '%sm.jpg' ORDER BY name";
+                WHERE path LIKE '%sm.jpg' LIMIT $start, $limit";
         try {
             $stmt = $conn->prepare($sql);
         } catch (DBALException $e) {
@@ -104,7 +104,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
         $conn = $this->getEntityManager()->getConnection();
         $sql = "SELECT * FROM `product` LEFT JOIN `photo` on 
                 product.id = photo.product_id
-                WHERE date(CREATED_AT) > CURRENT_DATE - INTERVAL 2 day
+                WHERE date(CREATED_AT) > CURRENT_DATE - INTERVAL 1 month 
                 AND photo.path LIKE '%sm.jpg' AND SKU LIKE ?";
         try {
             $stmt = $conn->prepare($sql);
@@ -156,7 +156,7 @@ class ProductRepository extends \Doctrine\ORM\EntityRepository
     public function getLastItem()
     {
         $conn = $this->getEntityManager()->getConnection();
-        $sql = "SELECT `SKU`, `name`, `CREATED_AT` FROM `product` ORDER BY id DESC LIMIT 1";
+        $sql = "SELECT * FROM `product` ORDER BY id DESC LIMIT 1";
 
         try {
             $stmt = $conn->prepare($sql);

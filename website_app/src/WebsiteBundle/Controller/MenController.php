@@ -3,10 +3,12 @@
 namespace WebsiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  * @Route("/men")
@@ -16,6 +18,7 @@ class MenController extends Controller
 
     /**
      * @Route("/", name="men-all")
+     * @Template("WebsiteBundle:Men:men_all.html.twig")
      */
 
     public function indexAction()
@@ -27,16 +30,19 @@ class MenController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->getProducts($sku, $path);
 
-        return $this->render('WebsiteBundle:More:men_all.html.twig', ['products' =>
-            $products]);
+        return
+            [
+                'products' => $products
+            ];
     }
 
     /**
      * @Route("/products/{productName}", methods={"GET", "POST"})
+     * @Template("WebsiteBundle:Men:men_individual_prod.html.twig")
      * @param $productName
      * @param Request $request
      * @param SessionInterface $session
-     * @return Response
+     * @return RedirectResponse|array
      */
 
     public function productAction($productName , Request $request, SessionInterface $session)
@@ -75,12 +81,15 @@ class MenController extends Controller
 
         }
 
-        return $this->render('WebsiteBundle:More:men_individual_prod.html.twig', ['products' =>
-            $product]);
+        return
+            [
+                'products' => $product
+            ];
     }
 
     /**
      * @Route("/boots", name="men-boots")
+     * @Template("WebsiteBundle:Men:men_boots.html.twig")
      */
 
     public function bootsAction()
@@ -92,13 +101,16 @@ class MenController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->getProductsByCategory($categoryId, $path);
 
-        return $this->render('WebsiteBundle:More:men_boots.html.twig', ['products' =>
-            $products]);
+        return
+            [
+                'products' => $products
+            ];
 
     }
 
     /**
      * @Route("/sneakers", name="men-sneakers")
+     * @Template("WebsiteBundle:Men:men_sneakers.html.twig")
      */
 
     public function sneakersAction()
@@ -110,12 +122,15 @@ class MenController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->getProductsByCategory($categoryId, $path);
 
-        return $this->render('WebsiteBundle:More:men_sneakers.html.twig', ['products' =>
-            $products]);
+        return
+            [
+                'products' => $products
+            ];
     }
 
     /**
      * @Route("/dress", name="men-dress")
+     * @Template("WebsiteBundle:Men:men_dress.html.twig")
      */
 
     public function dressAction()
@@ -127,12 +142,15 @@ class MenController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->getProductsByCategory($categoryId, $path);
 
-        return $this->render('WebsiteBundle:More:men_dress.html.twig', ['products' =>
-            $products]);
+        return
+            [
+                'products' => $products
+            ];
     }
 
     /**
      *@Route("/newest", name="men-newest")
+     * @Template("WebsiteBundle:Men:men_new.html.twig")
      */
 
     public function whatsNewAction()
@@ -142,8 +160,10 @@ class MenController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $newProducts = $repo->getNewestProducts($category);
 
-        return $this->render('WebsiteBundle:More:men_new.html.twig',['products' =>
-            $newProducts]);
+        return
+            [
+                'products' => $newProducts
+            ];
     }
 
 

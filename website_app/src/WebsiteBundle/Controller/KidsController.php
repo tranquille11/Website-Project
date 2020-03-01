@@ -3,10 +3,12 @@
 namespace WebsiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 
 /**
@@ -28,10 +30,11 @@ class KidsController extends Controller
 
     /**
      * @Route("/products/{productName}", methods={"GET", "POST"})
+     * @Template("WebsiteBundle:Kids:kids_individual_prod.html.twig")
      * @param $productName
      * @param Request $request
      * @param SessionInterface $session
-     * @return Response
+     * @return array|RedirectResponse
      */
 
     public function productAction($productName , Request $request, SessionInterface $session)
@@ -71,12 +74,15 @@ class KidsController extends Controller
 
         }
 
-        return $this->render('WebsiteBundle:More:kids_individual_prod.html.twig', ['products' =>
-            $product]);
+        return
+            [
+                'products' => $product
+            ];
     }
 
     /**
      * @Route("/boys", name="kids-boys")
+     * @Template("WebsiteBundle:Kids:kids_boys.html.twig")
      */
 
 
@@ -89,12 +95,15 @@ class KidsController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->getProducts($sku,$path);
 
-        return $this->render('WebsiteBundle:More:kids_boys.html.twig', ['products' =>
-            $products]);
+        return
+            [
+            'products' => $products
+            ];
     }
 
     /**
      * @Route("/girls", name="kids-girls")
+     * @Template("WebsiteBundle:Kids:kids_girls.html.twig")
      */
 
     public function girlsAction()
@@ -106,12 +115,15 @@ class KidsController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->getProducts($sku, $path);
 
-        return $this->render('WebsiteBundle:More:kids_girls.html.twig', ['products' =>
-            $products]);
+        return
+            [
+            'products' => $products
+            ];
     }
 
     /**
      *@Route("/newest", name="kids-newest")
+     * @Template("WebsiteBundle:Kids:kids_new.html.twig")
      */
 
     public function whatsNewAction()
@@ -121,7 +133,9 @@ class KidsController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $newProducts = $repo->getNewestProducts($category);
 
-        return $this->render('WebsiteBundle:More:kids_new.html.twig',['products' =>
-            $newProducts]);
+        return
+            [
+            'products' => $newProducts
+            ];
     }
 }

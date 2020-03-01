@@ -21,18 +21,14 @@ document.querySelector('#button-edit-product').addEventListener('click', functio
 });
 
 document.getElementById('save_changes').addEventListener('click', function (e) {
-    if(confirm('Are you sure you want to save changes?')) {
-    }
-    else {
+    if(!(confirm('Are you sure you want to save changes?'))) {
         e.preventDefault();
     }
 });
 
 document.getElementById('delete_button').addEventListener('click', function (e) {
-   if(confirm('Are you sure you want to delete this item?\nThis action will be permanent!')){
-   }
-   else {
-       e.preventDefault();
+   if(!(confirm('Are you sure you want to delete this item?\nThis action will be permanent!'))) {
+       e.preventDefault()
    }
 });
 

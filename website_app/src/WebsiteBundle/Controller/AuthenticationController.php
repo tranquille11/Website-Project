@@ -10,18 +10,18 @@ use Symfony\Component\Routing\Annotation\Route;
 use WebsiteBundle\Entity\User;
 use WebsiteBundle\WebsiteBundle;
 use Doctrine\ORM\EntityManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class AuthenticationController extends Controller
 {
 
     /**
      * @Route("/login", name="login", methods={"GET"})
+     * @Template("WebsiteBundle:Default:login.html.twig")
      */
 
     public function loginViewAction()
     {
-
-        return $this->render('WebsiteBundle:Default:login.html.twig');
     }
 
     /**
@@ -59,12 +59,12 @@ class AuthenticationController extends Controller
 
     /**
      * @Route("/register", name="register", methods={"GET"})
+     * @Template("WebsiteBundle:Default:register.html.twig")
      *
      */
 
     public function registerViewAction()
     {
-        return $this->render('WebsiteBundle:Default:register.html.twig');
     }
 
     /**

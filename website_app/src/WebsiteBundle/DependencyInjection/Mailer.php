@@ -77,7 +77,8 @@ class Mailer
                 ->setTo(self::$handler)
                 ->attach(Swift_Attachment::fromPath($this->path))
                 ->setBody($this->twig->render('career_admin_email.html.twig',
-                    ['clientFirstName' => $this->clientFirstName,
+                    [
+                     'clientFirstName' => $this->clientFirstName,
                      'clientLastName' => $this->clientSurname,
                      'clientEmail' => $this->clientEmail,
                      'careerOption'=> $this->careerOption,

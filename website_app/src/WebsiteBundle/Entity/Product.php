@@ -27,7 +27,7 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=50)
+     * @ORM\Column(name="name", type="string", length=50, unique=true)
      */
     private $name;
 
@@ -48,7 +48,7 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="SKU", type="string", length=50)
+     * @ORM\Column(name="SKU", type="string", length=50, unique=true)
      */
     private $sku;
 

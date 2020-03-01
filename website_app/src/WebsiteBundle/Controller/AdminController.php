@@ -4,6 +4,8 @@ namespace WebsiteBundle\Controller;
 
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,57 +22,85 @@ class AdminController extends Controller
 
     /**
      * @Route("/", name="login")
+     * @Template("WebsiteBundle:Admin:login.html.twig")
      */
 
     public function loginAction()
     {
-        return $this->render('WebsiteBundle:Admin:login.html.twig');
+
     }
 
     /**
      * @Route("/dashboard", name="dashboard")
+     * @Template("WebsiteBundle:Admin:dashboard.html.twig")
      */
     public function indexAction()
     {
-        return $this->render('WebsiteBundle:Admin:dashboard.html.twig');
     }
 
     /**
-     * @return Response
      * @Route("/orders", name="orders")
+     * @Template ("WebsiteBundle:Admin:orders.html.twig")
      */
 
     public function ordersAction()
     {
-        return $this->render('WebsiteBundle:Admin:orders.html.twig');
     }
 
     /**
      * @Route("/products", name="products")
+     * @Template("WebsiteBundle:Admin:products.html.twig")
+     * @param Request $request
+     * @return array|RedirectResponse|JsonResponse
      */
 
-    public function productsAction()
+    public function productsAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $repo = $em->getRepository('WebsiteBundle:Product');
-        $products = $repo->getAllProducts();
-        return $this->render('WebsiteBundle:Admin:products.html.twig', ['products'=>$products]);
+
+        $page = $request->query->get('page');
+
+        if (isset($page) && is_numeric($page) && $page > 0) {
+            $limit = 5;
+            $start = ($page - 1) * $limit;
+            $em = $this->getDoctrine()->getManager();
+            $repo = $em->getRepository('WebsiteBundle:Product');
+            $products = $repo->getAllProducts($start, $limit);
+
+            $numberOfProducts = $repo->createQueryBuilder('prod')
+                                     ->select('count(prod.id)')
+                                     ->getQuery()
+                                     ->getSingleScalarResult();
+
+            $numberOfPages = ceil($numberOfProducts / $limit);
+            if ($page > $numberOfPages) {
+                $url = $this->generateUrl('products');
+                return $this->redirect($url . "?page=$numberOfPages");
+            }
+            return
+                [
+                    'products' => $products,
+                    'totalPages' => $numberOfPages
+                ];
+        }
+        $url = $this->generateUrl('products');
+        return $this->redirect($url . "?page=1");
 
     }
 
     /**
-     * @Route("/products/edit/{prodName}", methods={"GET","POST"}, defaults={"prodName"="ANSARI"}, name="edit-product")
+     * @Route("/products/{prodName}", methods={"GET","POST"}, defaults={"prodName"="ANSARI"}, name="edit-product")
      * @Template("WebsiteBundle:Admin:individual_prod.html.twig")
      * @param Request $request
      * @param $prodName
      * @return array
      */
+
     public function oneProductAction(Request $request, $prodName)
     {
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository('WebsiteBundle:Product');
         $product = $repo->findOneBy([
-            'name'=>$prodName
+            'name' => $prodName
         ]);
 
         if (isset($_POST['save_changes'])) {
@@ -97,13 +127,17 @@ class AdminController extends Controller
             $this->redirect($url);
         }
 
-        return ['product'=>$product];
+        return
+            [
+                'product' => $product
+            ];
     }
 
     /**
-     * @Route("/products/create", name="create-products", methods={"GET", "POST"})
+     * @Route("/create-product", name="create-products", methods={"GET", "POST"})
+     * @Template ("WebsiteBundle:Admin:create_products.html.twig")
      * @param Request $request
-     * @return Response
+     * @return array|RedirectResponse
      * @throws Exception
      */
 
@@ -154,16 +188,15 @@ class AdminController extends Controller
             $lastRepo = $lastEm->getRepository('WebsiteBundle:Product');
             $newProduct = $lastRepo->find($productId);
 
-            for ($i=0; $i<=1; $i++) {
-                if ($i==0) {
+            for ($i = 0; $i <= 1; $i++) {
+                if ($i == 0) {
                     $photo = new Photo();
-                    $photo->setPath($name.'-sm.jpg');
+                    $photo->setPath($name . '-sm.jpg');
                     $photo->setProduct($newProduct);
                     $lastEm->persist($photo);
                     $lastEm->flush();
 
-                }
-                else {
+                } else {
                     $photo = new Photo();
                     $photo->setPath($name . '-big.jpg');
                     $photo->setProduct($newProduct);
@@ -177,31 +210,29 @@ class AdminController extends Controller
 
         }
 
-        return $this->render('WebsiteBundle:Admin:create_products.html.twig',
-            ['categories' => $data,
-             'lastSKU'=>$lastSKU]);
+        return
+            [
+                'categories' => $data,
+                'lastSKU' => $lastSKU
+            ];
 
     }
 
     /**
      * @Route("/discounts", name="discounts")
+     * @Template("WebsiteBundle:Admin:discounts.html.twig")
      */
 
     public function discountsAction()
     {
-
-        return $this->render('WebsiteBundle:Admin:discounts.html.twig');
     }
 
     /**
      * @Route("/reports", name="reports")
+     * @Template("WebsiteBundle:Admin:reports.html.twig")
      */
 
     public function reportsAction()
     {
-
-        return $this->render('WebsiteBundle:Admin:reports.html.twig');
     }
-
-
 }
