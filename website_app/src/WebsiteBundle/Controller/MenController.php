@@ -58,7 +58,7 @@ class MenController extends Controller
             return $this->redirect($url);
         }
 
-        if ($request->getMethod() === 'POST') {
+        if ($request->isXmlHttpRequest()) {
 
             $name = trim($request->request->get('name'));
             $price = trim($request->request->get('price'));

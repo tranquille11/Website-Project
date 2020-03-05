@@ -15,8 +15,14 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous" defer></script>
+    {% block scripts %} {% endblock %}
     <title>{% block title %} Demo Project{% endblock %}</title>
 </head>
+
 <div class="container-fluid" id="div">
     <div id="div2">
         <a href="{{ path('home') }}"> <img
@@ -68,6 +74,8 @@
                 <div id="innerdivs">
                     <i class="fas fa-shopping-cart fa-lg"></i>
                 </div>
+                <div>
+                </div>
             {% endif %}
 
             {% if app.session.get('shopping_cart') %}
@@ -76,12 +84,19 @@
                 </div>
             {% endif %}
 
-
             <div>
                 <span id="text"> <a href="{{ path('shopping-cart') }}" class="onwhite
                 text-decoration-none">
                         Shopping
                         Cart </a></span>
+                <div id="text">
+                    {% set cart = app.session.get('shopping_cart') %}
+                    {% set total = 0 %}
+                    {% for item in cart %}
+                        {% set total = total + (item.qty * item.price) %}
+                    {% endfor %}
+                    Total: <b>${{ total|number_format(2) }}</b>
+                </div>
             </div>
         </div>
     </div>
@@ -182,10 +197,10 @@
                                placeholder="Search" aria-label="Search" name="search"
                                id="search">
 
-                            <button class="search-btn" type="submit"
-                                    id="search-btn">
-                                <i class="fas fa-search fa-lg"></i>
-                            </button>
+                        <button class="search-btn" type="submit"
+                                id="search-btn">
+                            <i class="fas fa-search fa-lg"></i>
+                        </button>
                     </form>
                 </div>
             </div>

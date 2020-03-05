@@ -3,6 +3,7 @@
 namespace WebsiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -26,9 +27,10 @@ class AuthenticationController extends Controller
 
     /**
      * @Route("/login", methods={"POST"})
+     * @Template("WebsiteBundle:Default:login.html.twig")
      * @param Request $request
      * @param SessionInterface $session
-     * @return Response
+     * @return array|RedirectResponse
      */
 
     public function loginAction(Request $request, SessionInterface $session)
@@ -48,7 +50,10 @@ class AuthenticationController extends Controller
 
         if (!$user) {
             $success = false;
-            return $this->render('WebsiteBundle:Default:login.html.twig',['success'=>$success]);
+            return
+                [
+                    'success'=>$success
+                ];
         }
 
         $session->set('user', $user->getId());
@@ -69,8 +74,9 @@ class AuthenticationController extends Controller
 
     /**
      * @Route("/register", methods={"POST"})
+     * @Template("WebsiteBundle:Default:register.html.twig")
      * @param Request $request
-     * @return Response
+     * @return array|RedirectResponse
      */
 
     public function registerAction(Request $request)
@@ -100,6 +106,6 @@ class AuthenticationController extends Controller
             return $this->redirect($url);
         }
 
-        return $this->render('WebsiteBundle:Default:register.html.twig');
+        return [];
     }
 }

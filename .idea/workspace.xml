@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="709f4a59-3a0b-47a5-994e-2a55852d61bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dump.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/my_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_project.iml" afterDir="false" />
@@ -10,41 +9,17 @@
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/AuthenticationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/KidsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/KidsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/MenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/MenController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/WomenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Controller/WomenController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/Mailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/DependencyInjection/Mailer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/uploads/CV_Vlad_231321321_5e56572b85535.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/uploads/CV_Vlad_Vlad_5e540bd9510ff.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/uploads/CV_Vlad_Vlad_5e540bf268a69.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/public/uploads/CV_Vlad_Vlad_5e540cd8addb2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Repository/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Repository/CategoriesRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/create_products.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/create_products.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/dashboard.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/individual_prod.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/products.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Admin/products.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/checkout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/checkout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_all.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_all.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_boys.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_boys.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_girls.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_girls.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_individual_prod.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/kids_new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_all.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_all.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_boots.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_boots.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_dress.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_dress.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_individual_prod.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/men_sneakers.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_sneakers.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_all.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_all.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_booties.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_booties.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_boots.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_boots.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_individual_prod.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_sandals.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_sandals.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/More/women_sneakers.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_sneakers.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/shopping_cart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Default/shopping_cart.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids/kids_individual_prod.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men/men_individual_prod.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_individual_prod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women/women_individual_prod.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,22 +105,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/website_app/web/bundles/website/js" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website_app/web/bundles/website/js" />
+      <recent name="$PROJECT_DIR$/website_app/web/bundles/website" />
+      <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\images" />
+      <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website_app/web/bundles/website/js" />
       <recent name="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Women" />
       <recent name="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Men" />
       <recent name="$PROJECT_DIR$/website_app/src/WebsiteBundle/Resources/views/Kids" />
       <recent name="$PROJECT_DIR$/website_app/web/bundles/website/images/kids" />
-      <recent name="$PROJECT_DIR$/website_app/web/bundles/website/email_twigs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/website_app/web/bundles/website" />
-      <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\images" />
-      <recent name="C:\Users\Vlad\Documents\Workspace\my_project\website_app\src\WebsiteBundle\Resources\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -198,7 +174,22 @@
       <workItem from="1582986533830" duration="2543000" />
       <workItem from="1582990587353" duration="18448000" />
       <workItem from="1583017686269" duration="3274000" />
-      <workItem from="1583056733706" duration="12559000" />
+      <workItem from="1583056733706" duration="14695000" />
+      <workItem from="1583098022054" duration="26000" />
+      <workItem from="1583098197516" duration="122000" />
+      <workItem from="1583107016213" duration="7450000" />
+      <workItem from="1583144121353" duration="1321000" />
+      <workItem from="1583152533220" duration="5490000" />
+      <workItem from="1583160635973" duration="8682000" />
+      <workItem from="1583186036242" duration="4892000" />
+      <workItem from="1583231190025" duration="4858000" />
+      <workItem from="1583254525367" duration="1183000" />
+      <workItem from="1583280616187" duration="1444000" />
+      <workItem from="1583319856469" duration="5000" />
+      <workItem from="1583329719463" duration="56000" />
+      <workItem from="1583331264067" duration="131000" />
+      <workItem from="1583331437420" duration="595000" />
+      <workItem from="1583420544677" duration="53000" />
     </task>
     <servers />
   </component>
@@ -218,10 +209,11 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="140" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.720@0.0.1366.720" timestamp="1582134499542" />
-    <state x="289" y="163" width="778" height="392" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582018420183">
-      <screen x="0" y="0" width="1366" height="720" />
+    <state x="289" y="165" width="778" height="392" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583110627060">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="289" y="163" width="778" height="392" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.720@0.0.1366.720" timestamp="1582018420183" />
+    <state x="289" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583110627060" />
     <state x="456" y="77" width="453" height="564" key="#com.intellij.ide.util.MemberChooser" timestamp="1582208585223">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -248,11 +240,11 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="260" y="171" width="835" height="375" key="NewPhpClassDialog/0.0.1366.720@0.0.1366.720" timestamp="1581625476241" />
-    <state x="171" y="0" key="SettingsEditor" timestamp="1583003427518">
+    <state x="171" y="0" key="SettingsEditor" timestamp="1583332029669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="171" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1582057565318" />
-    <state x="171" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583003427518" />
+    <state x="171" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583332029669" />
     <state x="0" y="0" width="1356" height="723" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1582979321795">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -267,11 +259,11 @@
     </state>
     <state x="438" y="166" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1581866358711" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581452057507" />
-    <state x="443" y="158" width="672" height="476" key="search.everywhere.popup" timestamp="1583094212292">
+    <state x="443" y="158" width="672" height="476" key="search.everywhere.popup" timestamp="1583187319617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="443" y="156" width="672" height="470" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1582205238201" />
-    <state x="443" y="158" width="672" height="476" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583094212292" />
+    <state x="443" y="158" width="672" height="476" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583187319617" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.142.1920.1040@0.0.1920.1040" timestamp="1581463090757" />
     <state x="408" y="270" width="540" height="180" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582980407561">
       <screen x="0" y="0" width="1366" height="728" />

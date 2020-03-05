@@ -1,4 +1,4 @@
-#eCommerce website
+# eCommerce website
 
 1. In order to re-create dependencies, run composer install.
 

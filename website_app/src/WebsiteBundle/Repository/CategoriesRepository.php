@@ -2,6 +2,8 @@
 
 namespace WebsiteBundle\Repository;
 
+use Doctrine\DBAL\DBALException;
+
 /**
  * CategoriesRepository
  *
@@ -10,4 +12,22 @@ namespace WebsiteBundle\Repository;
  */
 class CategoriesRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function getSubcategories()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+        $sql = "SELECT `id`, (SELECT concat('Women', ' - ', name) WHERE `parent_id` = 1
+                UNION SELECT concat('Men', ' - ', `name`) WHERE `parent_id` = 9
+                UNION SELECT concat('Kids', ' - ', `name`) WHERE `parent_id` = 6)
+                AS subcategory FROM `categories`
+                GROUP BY `id` HAVING `subcategory` is not null";
+
+        try {
+            $stmt = $conn->prepare($sql);
+        } catch (DBALException $e) {
+            echo $e->getMessage();
+        }
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

@@ -145,7 +145,7 @@ class AdminController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository('WebsiteBundle:Categories');
-        $data = $repo->findAll();
+        $data = $repo->getSubcategories();
 
         $newRepo = $em->getRepository('WebsiteBundle:Product');
         $lastSKU = $newRepo->getLastItem();
@@ -212,7 +212,7 @@ class AdminController extends Controller
 
         return
             [
-                'categories' => $data,
+                'subcategories' => $data,
                 'lastSKU' => $lastSKU
             ];
 

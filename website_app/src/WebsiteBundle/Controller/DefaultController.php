@@ -3,6 +3,8 @@
 namespace WebsiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -21,60 +23,55 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/",name="home")
-     * @return Response
+     * @Template("WebsiteBundle:Default:index.html.twig")
      */
 
     public function indexAction()
     {
-        return $this->render('WebsiteBundle:Default:index.html.twig');
     }
 
     /**
      * @Route("/about", name="about")
-     *
+     * @Template("WebsiteBundle:Default:about.html.twig")
      */
 
     public function aboutAction()
     {
-        return $this->render('WebsiteBundle:Default:about.html.twig');
     }
 
     /**
      * @Route("/contact", name="contact")
-     *
+     * @Template("WebsiteBundle:Default:contact.html.twig")
      */
     public function contactAction()
     {
-        return $this->render('WebsiteBundle:Default:contact.html.twig');
     }
 
     /**
      * @Route("/faq", name="faq")
-     *
+     * @Template("WebsiteBundle:Default:faq.html.twig")
      */
 
     public function faqAction()
     {
-        ;
-        return $this->render('WebsiteBundle:Default:faq.html.twig');
     }
 
     /**
      * @Route("/shipping-policy", name="shipping-policy")
+     * @Template("WebsiteBundle:Default:shipping_policy.html.twig")
      */
 
     public function shippingPolicyAction()
     {
-        return $this->render('WebsiteBundle:Default:shipping_policy.html.twig');
     }
 
     /**
      * @Route("/return-policy", name="return-policy")
+     * @Template("WebsiteBundle:Default:return_policy.html.twig")
      */
 
     public function returnPolicyAction()
     {
-        return $this->render('WebsiteBundle:Default:return_policy.html.twig');
     }
 
     /**
@@ -94,20 +91,19 @@ class DefaultController extends Controller
         return
             [
                 'womensizes' => $size1,
-                'mensizes'   => $size2,
-                'header'     => $header
+                'mensizes' => $size2,
+                'header' => $header
             ];
     }
 
 
     /**
      * @Route("/careers", name="careers", methods={"GET"})
+     * @Template("WebsiteBundle:Default:careers.html.twig")
      */
 
     public function careersAction()
     {
-
-        return $this->render('WebsiteBundle:Default:careers.html.twig');
     }
 
     /**
@@ -164,53 +160,54 @@ class DefaultController extends Controller
 
     /**
      * @Route("/terms-of-use", name="terms-of-use")
+     * @Template("WebsiteBundle:Default:terms_of_use.html.twig")
      */
 
     public function termsOfUseAction()
     {
-
-        return $this->render('WebsiteBundle:Default:terms_of_use.html.twig');
     }
 
     /**
      * @Route("/terms-of-sale", name="terms-of-sale")
+     * @Template("WebsiteBundle:Default:terms_of_sale.html.twig")
      */
 
     public function termsOfSaleAction()
     {
-        return $this->render('WebsiteBundle:Default:terms_of_sale.html.twig');
     }
 
     /**
      * @Route("/privacy-policy", name="privacy-policy")
+     * @Template("WebsiteBundle:Default:privacy_policy.html.twig")
      */
 
     public function privacyPolicyAction()
     {
-        return $this->render('WebsiteBundle:Default:privacy_policy.html.twig');
+        ;
     }
 
     /**
      * @Route("/promotion-rules", name="promotion-rules")
+     * @Template("WebsiteBundle:Default:promotion_rules.html.twig")
      */
     public function promotionRulesAction()
     {
-        return $this->render('WebsiteBundle:Default:promotion_rules.html.twig');
     }
 
     /**
      * @Route("/consent-and-release-agreement", name="consent-and-release-agreement")
+     * @Template("WebsiteBundle:Default:consent_agreement.html.twig")
      */
 
     public function consentAgreementAction()
     {
-        return $this->render('WebsiteBundle:Default:consent_agreement.html.twig');
     }
 
     /**
      * @Route("/search", name="search", methods={"POST"})
+     * @Template("WebsiteBundle:Default:search.html.twig")
      * @param Request $request
-     * @return Response
+     * @return array
      */
 
     public function searchAction(Request $request)
@@ -221,30 +218,27 @@ class DefaultController extends Controller
         $repo = $em->getRepository('WebsiteBundle:Product');
         $products = $repo->searchProducts($searchParam);
 
-        return $this->render('WebsiteBundle:Default:search.html.twig', ['products' =>
-            $products]);
+        return
+            [
+                'products' => $products
+            ];
     }
 
     /**
      * @Route("/account", name="account")
-     * @param SessionInterface $session
-     * @return Response
+     * @Template("WebsiteBundle:Default:my_account.html.twig")
      */
 
-    public function myAccountAction(SessionInterface $session)
+    public function myAccountAction()
     {
-        $userId = $session->get('user');
-        $em = $this->getDoctrine()->getManager();
-        $repo = $em->getRepository('WebsiteBundle:Orders');
-        
-        return $this->render('WebsiteBundle:Default:my_account.html.twig');
     }
 
     /**
      * @Route("/shopping-cart", name="shopping-cart" , methods={"GET", "POST"})
+     * @Template("WebsiteBundle:Default:shopping_cart.html.twig")
      * @param SessionInterface $session
      * @param Request $request
-     * @return Response
+     * @return array|Response
      */
 
     public function shoppingCartAction(SessionInterface $session, Request $request)
@@ -252,15 +246,18 @@ class DefaultController extends Controller
         $data = $session->get('shopping_cart');
 
 
-        if (isset($_POST['delete'])) {
+        if ($request->isXmlHttpRequest()) {
+
             $session->remove('shopping_cart');
             $deleteItem = strtoupper($request->request->get('productName'));
             unset($data[$deleteItem]);
             $session->set('shopping_cart', $data);
         }
 
-        return $this->render('WebsiteBundle:Default:shopping_cart.html.twig',
-            ['cart' => $data]);
+        return
+            [
+                'cart' => $data
+            ];
     }
 
     /**
@@ -279,9 +276,10 @@ class DefaultController extends Controller
 
     /**
      * @Route("/checkout", name="checkout", methods={"GET","POST"})
+     * @Template("WebsiteBundle:Default:checkout.html.twig")
      * @param SessionInterface $session
      * @param Request $request
-     * @return Response
+     * @return array|RedirectResponse
      */
 
     public function checkoutAction(SessionInterface $session, Request $request)
@@ -335,11 +333,16 @@ class DefaultController extends Controller
             return $this->redirect($url);
 
         }
-        return $this->render('WebsiteBundle:Default:checkout.html.twig', ['cart' => $data]);
+        return
+            [
+                'cart' => $data
+            ];
     }
 
     /**
      * @Route("/best-sellers", name="best-sellers")
+     * @Template("WebsiteBundle:More:best_sellers.html.twig")
+     * @return array
      */
 
     public function bestSellersAction()
@@ -362,7 +365,7 @@ class DefaultController extends Controller
 
         $info = [];
 
-        foreach($bestSellers as $item) {
+        foreach ($bestSellers as $item) {
             foreach ($item as $val) {
                 $entityManager = $this->getDoctrine()->getManager();
                 $repo = $entityManager->getRepository('WebsiteBundle:Product');
@@ -378,6 +381,9 @@ class DefaultController extends Controller
             }
         }
 
-        return $this->render('WebsiteBundle:More:best_sellers.html.twig', ['items'=>$itemList]);
+        return
+            [
+                'items' => $itemList
+            ];
     }
 }

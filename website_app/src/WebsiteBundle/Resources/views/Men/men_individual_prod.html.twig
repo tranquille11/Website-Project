@@ -1,6 +1,8 @@
 {% extends 'WebsiteBundle::base.html.twig' %}
+{% block scripts %}
+    <script src="{{ asset('bundles/website/js/add_to_cart-ajax.js') }}" defer></script>
+{% endblock %}
 {% block content %}
-
     <div class="products-main">
         <div class="single-product">
             {% for item in products %}
@@ -19,9 +21,8 @@
                         <div class="price"><b style="font-size: 15px;">Price:</b>
                             ${{ item.price }}
                         </div>
-                        {% if app.session.get('user') %}
                             <div class="cart-button">
-                                <form method="post">
+                                <form method="post" class="cart-ajax">
                                     <input type="hidden" name="name" value="{{ item.name }}">
                                     <input type="hidden" name="price" value="{{ item.price }}">
                                     <input type="hidden" name="path" value="{{ item.path }}">
@@ -31,17 +32,7 @@
                                     </button>
                                 </form>
                             </div>
-                        {% endif %}
-
-                        {% if not app.session.get('user') %}
-                            <div class="cart-button">
-                                    <button class="btn btn-dark" type="submit" disabled>
-                                        Add to Cart
-                                    </button>
-                            </div>
-                        {% endif %}
                     </div>
-
                 </div>
             {% endfor %}
         </div>

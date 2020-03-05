@@ -1,15 +1,17 @@
 {% extends 'WebsiteBundle::base.html.twig' %}
+{% block scripts %}
+    <script src=" {{ asset('bundles/website/js/delete_from_cart-ajax.js') }}" defer></script>
+{% endblock %}
 {% block content %}
 
     <div class="header-cart">
         <h2> Your cart </h2>
     </div>
     <div class="main-cart">
-
         {% set total = 0 %}
         {% for item in cart %}
-            {% set total = total + (item.price * item.qty) %}
             {% set itemPrice = item.price * item.qty %}
+            {% set total = total + itemPrice %}
             <div class="innermain-cart">
                 <div class="cart-content">
                     <img src="{{ item.path }}" alt="photo">
@@ -23,7 +25,7 @@
                 <div class="cart-content">
                     <span> ${{ itemPrice|number_format(2) }}</span>
                 </div>
-                <form method="post">
+                <form method="post" class="delete-item-ajax">
                     <div class="cart-content">
                         <button class="delete_item" type="submit" name="delete">
                             <i class="fa fa-trash fa-2x"></i>

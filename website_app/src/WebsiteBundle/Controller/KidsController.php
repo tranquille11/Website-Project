@@ -71,7 +71,6 @@ class KidsController extends Controller
             }
             $session->set('shopping_cart',$cart);
 
-
         }
 
         return
@@ -97,7 +96,7 @@ class KidsController extends Controller
 
         return
             [
-            'products' => $products
+                'products' => $products
             ];
     }
 
@@ -117,7 +116,7 @@ class KidsController extends Controller
 
         return
             [
-            'products' => $products
+                'products' => $products
             ];
     }
 
@@ -135,7 +134,7 @@ class KidsController extends Controller
 
         return
             [
-            'products' => $newProducts
+                'products' => $newProducts
             ];
     }
 }

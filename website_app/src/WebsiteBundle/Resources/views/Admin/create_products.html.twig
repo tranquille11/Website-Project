@@ -62,14 +62,8 @@
             <div style="margin-top:1em;">
                 <label>
                     <select name="category" class="form-control">
-                        {% for item in categories %}
-                            {% if item.id < 6 and item.id > 0 and item.name != 'Women' %}
-                                <option value="{{ item.id }}">Women - {{ item.name }}</option>
-                            {% elseif item.id > 6 and  item.id < 9 and item.name != 'Kids' %}
-                                <option value="{{ item.id }}">Kids - {{ item.name }}</option>
-                            {% elseif item.id > 8 and  item.name != 'Men' %}
-                                <option value="{{ item.id }}">Men - {{ item.name }}</option>
-                            {% endif %}
+                        {% for item in subcategories %}
+                                <option value="{{ item.id }}">{{ item.subcategory }}</option>
                         {% endfor %}
                     </select>
                 </label>
