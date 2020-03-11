@@ -2,68 +2,77 @@
 {% block content %}
     <div class="admin-main">
         {% if lastSKU %}
-            Last Item created:
-            <table class="table table-sm" style="width:50%;">
+            <table class="table table-responsive p-0" style="font-size:12px; width:90%;
+            margin-top:1em;">
+                <h5 style="margin-top:1em; margin-left:2.9em; align-self: self-start">Last product
+                    created:</h5>
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>SKU</th>
-                    <th>Price</th>
-                    <th>Created on</th>
-                    <th></th>
+                    <th style="width:10%;" class="p-0">Name</th>
+                    <th style="width:10%;" class="p-0">SKU</th>
+                    <th style="width:40%;" class="p-0">Description</th>
+                    <th style="width:5%;" class="p-0">Price</th>
+                    <th style="width:12%;" class="p-0">Created on</th>
+                    <th style="width:10%;"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="align-middle">{{ lastSKU.name }}</td>
-                    <td class="align-middle">{{ lastSKU.SKU }}</td>
-                    <td class="align-middle">${{ lastSKU.price }}</td>
-                    <td class="align-middle">{{ lastSKU.CREATED_AT }}</td>
-                    <td class="align-middle">
+                    <td class="align-middle p-0">{{ lastSKU.name }}</td>
+                    <td class="align-middle p-0">{{ lastSKU.SKU }}</td>
+                    <td class="align-middle p-0 pr-3">{{ lastSKU.description }}</td>
+                    <td class="align-middle p-0">${{ lastSKU.price }}</td>
+                    <td class="align-middle p-0">{{ lastSKU.CREATED_AT|date("F jS Y g:ia
+                    \E\\E\\T")
+                        }}</td>
+                    <td class="align-middle p-0 ">
                         <a href="products/{{ lastSKU.name|lower }}"
                            class="button-href">
-                            <button class="btn btn-dark edit_button">View</button>
+                            <button class="btn btn-dark edit_button"
+                                    style="font-size:12px;">View</button>
                         </a>
                     </td>
                 </tr>
                 </tbody>
             </table>
         {% endif %}
-
-        <form method="post" action="{{ path('create-products') }}">
+        <form method="post" action="{{ path('create-products') }}" class="test-form">
+            <h5 style="margin-top: 2em; margin-bottom: 1em;">Create product</h5>
             <div class="row">
-                <div class="col">
+                <div class="col-md-3">
                     <label for="exampleFormControlInput1"> Name
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <input type="text" class="form-control create" id="exampleFormControlInput1"
                                placeholder="product name"
                                name="name" required>
                     </label>
                 </div>
-                <div class="col">
+                <div class="col-md-3">
                     <label> Price
-                        <input type="text" class="form-control" name="price" placeholder="price"
+                        <input type="text" class="form-control create" name="price" placeholder="price"
                                required>
                     </label>
                 </div>
-                <div class="col">
+                <div class="col-md-3">
                     <label> SKU
-                        <input type="text" class="form-control" name="SKU" placeholder="SKU"
+                        <input type="text" class="form-control create" name="SKU" placeholder="SKU"
                                required>
                     </label>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    <textarea class="form-control create" id="exampleFormControlTextarea1" rows="3"
                               placeholder="description" name="description" required></textarea>
                 </div>
             </div>
             <div style="margin-top:1em;">
                 <label>
-                    <select name="category" class="form-control">
+                    <select name="category" class="form-control  create">
+                        <option>Select category</option>
                         {% for item in subcategories %}
-                                <option value="{{ item.id }}">{{ item.subcategory }}</option>
+                                <option value="{{ item.id }}">{{ item
+                                    .subcategory }}</option>
                         {% endfor %}
                     </select>
                 </label>

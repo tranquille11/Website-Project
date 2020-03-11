@@ -1116,10 +1116,50 @@ a {
     padding:0;
 }
 
-.create-product-form input,textarea,select {
-    font-size: 15px !important;
+.create-product-form input,textarea,select, .create {
+    font-size: 12px !important;
 }
 
+#search {
+    margin-top:2em;
+    width:300px;
+    color: black;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding:0.25em;
+    margin-bottom:0;
+}
+
+#search:focus {
+    border: 1px solid rgba(0,0,0,0.4);
+}
+#search::placeholder {
+    color:black;
+}
+
+#search-results {
+    position:absolute;
+    display:none;
+    z-index: 1;
+    border: 1px solid rgba(0,0,0,0.2);
+    height:150px;
+    background: white;
+    width:500px;
+    border-radius: 5px;
+}
+
+.table-results td {
+    border:none;
+}
+
+#result-content {
+    transform:translateY(30%);
+}
+.test-form {
+    width:90%;
+    margin-top:1em;
+    height:auto;
+}
 .create-product-button {
     border:none;
     background:black;

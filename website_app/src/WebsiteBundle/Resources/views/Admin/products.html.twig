@@ -1,18 +1,43 @@
 {% extends 'WebsiteBundle:Admin:dashboard.html.twig' %}
-
+{% block scripts %}
+    <script src="{{ asset('bundles/website/js/livesearch.js') }}" defer></script>
+{% endblock %}
 {% block content %}
-
     <div class="admin-main">
         <div class="container">
+            <label style="padding:0;margin:0;">
+                <input type="text" placeholder="Search product" id="search">
+            </label>
+            <div id="search-results">
+                <div id="result-content">
+                <table class="table table-responsive table-results" style="width:100%">
+                    <tbody>
+                    <tr>
+                        <td style="width:20%">
+                            <img src="" alt="photo" width="70" height="70">
+                        </td>
+                        <td id="item-name"  class="align-middle" style="width:20%;">test</td>
+                        <td id="item-sku"  class="align-middle"  style="width:20%;">test</td>
+                        <td id="item-price"  style="width:20%;" class="align-middle">test</td>
+                        <td style="width:20%;"  class="align-middle">
+                            <a href="" class="button-href ">
+                                <button class="btn btn-dark edit_button">View</button>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
             <table class="table table-responsive table-striped">
                 <thead>
                 <tr>
-                    <th style="width:20%;"></th>
-                    <th style="width:25%;">Product name</th>
-                    <th style="width:15%;">SKU</th>
-                    <th style="width:15%;">Price</th>
-                    <th style="width:20%;">Created on</th>
-                    <th></th>
+                    <th style="width:20%; border:none;" ></th>
+                    <th style="width:25%; border:none;">Product name</th>
+                    <th style="width:15%; border:none;">SKU</th>
+                    <th style="width:15%; border:none;">Price</th>
+                    <th style="width:20%; border:none;">Created on</th>
+                    <th style="border:none;"></th>
                 </tr>
                 </thead>
                 <tbody>

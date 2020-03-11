@@ -27,7 +27,6 @@ class AdminController extends Controller
 
     public function loginAction()
     {
-
     }
 
     /**
@@ -56,6 +55,21 @@ class AdminController extends Controller
 
     public function productsAction(Request $request)
     {
+
+        if ($request->isXmlHttpRequest()) {
+            $q = $request->query->get('q');
+            if ($q != '') {
+                $em = $this->getDoctrine()->getManager();
+                $repo = $em->getRepository('WebsiteBundle:Product');
+                $result = $repo->searchProducts($q);
+
+                return new JsonResponse(
+                    [
+                        'result' => $result
+                    ]
+                );
+            }
+        }
 
         $page = $request->query->get('page');
 

@@ -16,11 +16,8 @@ class CategoriesRepository extends \Doctrine\ORM\EntityRepository
     public function getSubcategories()
     {
         $conn = $this->getEntityManager()->getConnection();
-        $sql = "SELECT `id`, (SELECT concat('Women', ' - ', name) WHERE `parent_id` = 1
-                UNION SELECT concat('Men', ' - ', `name`) WHERE `parent_id` = 9
-                UNION SELECT concat('Kids', ' - ', `name`) WHERE `parent_id` = 6)
-                AS subcategory FROM `categories`
-                GROUP BY `id` HAVING `subcategory` is not null";
+        $sql = "select c.id, (SELECT concat(cat.name,' - ', c.name)) as subcategory from categories as c
+                INNER JOIN categories as cat on c.parent_id = cat.id";
 
         try {
             $stmt = $conn->prepare($sql);
