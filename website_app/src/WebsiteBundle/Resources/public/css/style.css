@@ -79,13 +79,13 @@
     display: flex;
 }
 
-#search {
+#search-main {
     background:none;
     border: none;
     color:white;
     border-bottom:1px solid rgba(255,255,255,0.8);
 }
-#search::placeholder {
+#search-main::placeholder {
     color:white;
 }
 
@@ -322,7 +322,7 @@
         display: none
     }
 
-    #search {
+    #search-main {
         display: none
     }
 }
@@ -991,9 +991,16 @@ a {
     min-height: 100%;
     margin:0;
     width: 15%;
-    border-right: 2px solid black;
     padding: 20px;
-    background: rgba(246, 246, 243, 1);
+    background: #4564ed;
+    color:white;
+}
+
+.admin-right-side {
+    width:85%;
+    margin:0;
+    padding:0;
+    background: #f5f7f7;
 }
 
 .icon {
@@ -1008,6 +1015,17 @@ a {
     list-style: none;
     padding: 0;
     margin:0;
+    color:lightgrey;
+}
+
+.admin-categories {
+    text-decoration: none;
+    color:lightgrey;
+}
+
+.admin-categories:hover {
+    text-decoration: none;
+    color:white !important;
 }
 
 .left-list li {
@@ -1079,8 +1097,9 @@ a {
     font-weight: bold;
     width: 15%;
     height: 100%;
-    color: black;
-    border-right: 2px solid black;
+    color: white;
+    background: #4564ed;
+    border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .nav-admin {
@@ -1088,8 +1107,7 @@ a {
     background: white;
     align-items: center;
     height: 10%;
-    border-bottom: 2px solid black;
-    background: rgba(246, 246, 243, 1);
+    background: none;
 }
 
 .list-dashboard {
@@ -1187,9 +1205,10 @@ a {
     background: none;
     padding: 0;
     margin: 0;
+    color:rgba(255,255,255,0.7);
 }
 .menu-button:hover {
-    color: #52bfb4;
+    color:white;
 }
 
 .menu-button:focus {
@@ -1265,6 +1284,32 @@ a {
     width:75px;
 }
 
+.main-dashboard {
+    display:flex;
+    margin-top:5px;
+    justify-content: space-around;
+}
+
+#div_chart {
+    height:fit-content;
+    border:1px solid lightgrey;
+    margin-top:1em;
+    margin-left: -3em;
+}
+
+.reports {
+    display:flex;
+    margin-top:1em;
+    flex-direction: column;
+    height:400px;
+    justify-content: space-between;
+}
+.dashboard-mini {
+    width:250px;
+    height:125px;
+    border:1px solid magenta;
+    background:white;
+}
 @media screen and (max-width: 1400px) {
     #journey {
         display: none;
@@ -1288,7 +1333,7 @@ a {
 
     }
 
-    #search {
+    #search-main {
         width: 170px;
 
     }

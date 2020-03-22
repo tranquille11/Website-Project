@@ -42,6 +42,7 @@
       <path value="$PROJECT_DIR$/website_app/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/website_app/vendor/symfony/symfony" />
       <path value="$PROJECT_DIR$/website_app/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/website_app/vendor/cmen/google-charts-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

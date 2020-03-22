@@ -3,6 +3,7 @@
 namespace WebsiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -141,15 +142,15 @@ class DefaultController extends Controller
 
             $loader = new FilesystemLoader('bundles/website/email_twigs');
             $twig = new Environment($loader);
-            $email = new Mailer($twig);
-            $email->setClientEmail($clientEmail);
-            $email->setClientFirstName($name);
-            $email->setClientSurname($surname);
-            $email->setPhoneNumber($phoneNumber);
+            $email = (new Mailer($twig,$this->container))->getSwiftInstance();
+            $email->setEmail($clientEmail);
+            $email->setName($name);
+            $email->setSurname($surname);
+            $email->setPhone($phoneNumber);
             $email->setCareerOption($careerOption);
-            $email->sendCareerEmailToClient();
-            $email->setAttachmentPath($destination . "/" . $fileName);
-            $email->sendCareerEmailToHandler();
+            $email->sendToClient();
+            $email->setPath($destination . "/" . $fileName);
+            $email->sendToHandler();
             unlink($destination . "/" . $fileName);
 
             return $this->render('WebsiteBundle:Default:careers.html.twig');

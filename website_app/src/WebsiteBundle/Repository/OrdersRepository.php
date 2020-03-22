@@ -13,4 +13,21 @@ use Doctrine\DBAL\DBALException;
 class OrdersRepository extends \Doctrine\ORM\EntityRepository
 {
 
+
+    public function getOrderTotal($year, $month)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+        $sql = "select oi.order_id, sum(oi.quantity * oi.price_per_item) as total, o.CREATED_AT from orders as o
+                inner join orders__items as oi on o.id = oi.order_id
+                group by oi.order_id
+                having o.CREATED_AT between '$year-$month-01' and '$year-$month-31'";
+
+        try {
+            $stmt = $conn->prepare($sql);
+        } catch (DBALException $e) {
+        }
+
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

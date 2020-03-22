@@ -1,19 +1,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=1.0, maximum-scale=1.0">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+          rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('bundles/website/css/style.css') }}" rel="stylesheet">
     <script
             src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous" defer></script>
     <script src="{{ asset('bundles/website/js/admin.js') }}" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     {% block scripts %}
+        <script type="text/javascript" defer>
+            {{ gc_draw(linechart, 'div_chart') }}
+        </script>
     {% endblock %}
     <link href="{{ asset('bundles/website/css/fontawesome/css/all.css') }}" rel="stylesheet">
     <title>{% block title %} Admin {% endblock %}</title>
@@ -21,57 +32,96 @@
 <body style="margin:0;padding:0;">
 <nav class="nav-admin">
     <div class="header-admin">
-        <span style="margin-left:20px;">VLAD LTD</span>
+        <span style="margin-left:20px;">
+         <i class="fab fa-vimeo-v fa-lg"></i>
+            &nbsp;Admin
+        </span>
     </div>
 </nav>
 <div class="allAdmin">
     <div class="admin-left-side">
         <ul class="left-list">
-            <li><i class="fab fa-dashcube icon"></i>
-                <a href="{{ path('dashboard') }}" class="onwhite">Dashboard</a>
+            <li>
+                <a href="{{ path('dashboard') }}" class="admin-categories"
+                   style="font-weight: bold; color:white;">
+                    <i class="fab fa-dashcube icon" style="color:white !important"></i>
+                    Dashboard
+                </a>
+            </li>
+            <div style="width:80%"></div>
+            <li>
+                <a href="#" class="customers admin-categories"
+                style="color:lightgrey">
+                    <i class="fas fa-users icon"></i>
+                    Customers
+                </a>
             </li>
             <li>
-                <i class="fas fa-users icon"></i>
-                <a href="#" class="onwhite customers">Customers</a>
-            </li>
-            <li>
-                <i class="fas fa-user-tag icon"></i>
-                <button class="menu-button">Orders</button>
+                <button class="menu-button">
+                    <i class="fas fa-user-tag icon"></i>
+                    Orders
+                </button>
                 <div class="hidden-menu-block">
                     <ul class="list-dashboard">
-                        <li><a href="#" class="onwhite">All orders</a></li>
-                        <li><a href="#" class="onwhite">Place order</a></li>
-                        <li><a href="#" class="onwhite">Search order</a></li>
+                        <li><a href="#" class="admin-categories">All orders</a></li>
+                        <li><a href="#" class="admin-categories">Place order</a></li>
+                        <li><a href="#" class="admin-categories">Search order</a></li>
                     </ul>
                 </div>
             </li>
             <li>
-                <i class="fas fa-shopping-cart icon"></i>
-                <button class="menu-button">Products</button>
+                <button class="menu-button">
+                    <i class="fas fa-shopping-cart icon"></i>
+                    Products
+                </button>
                 <div class="hidden-menu-block">
                     <ul class="list-dashboard">
-                        <li><a href="{{ path ('products')}}" class="onwhite">All products</a></li>
-                        <li><a href=" {{ path('create-products') }}" class="onwhite">Create product</a></li>
+                        <li><a href="{{ path ('products') }}" class="admin-categories">All products</a></li>
+                        <li><a href=" {{ path('create-products') }}" class="admin-categories">Create
+                                product</a></li>
                     </ul>
                 </div>
             </li>
             <li>
-                <i class="fas fa-percent icon"></i>
-                <button class="menu-button">Discount codes</button>
+                <button class="menu-button">
+                    <i class="fas fa-percent icon"></i>
+                    Discount codes
+                </button>
                 <div class="hidden-menu-block">
                     <ul class="list-dashboard">
-                        <li><a href="#" class="onwhite">All discounts</a></li>
-                        <li><a href="#" class="onwhite">Create discount</a></li>
-                        <li><a href="#" class="onwhite">Edit discount</a></li>
+                        <li><a href="#" class="admin-categories">All discounts</a></li>
+                        <li><a href="#" class="admin-categories">Create discount</a></li>
+                        <li><a href="#" class="admin-categories">Edit discount</a></li>
                     </ul>
                 </div>
             </li>
-            <li><i class="fas fa-atlas icon"></i>
-                <a href="{{ path('reports') }}" class="onwhite reports">Reports</a>
+            <li>
+                <a href="{{ path('reports') }}" class="admin-categories">
+                    <i class="fas fa-atlas icon"></i>
+                    Reports
+                </a>
             </li>
         </ul>
     </div>
     {% block content %}
+        <div class="admin-right-side">
+            <div style="margin-top:1em; margin-left:1.25rem; font-size:25px;
+            color:grey">Dashboard</div>
+            <div class="main-dashboard">
+                <div id="div_chart"></div>
+                <div class="reports">
+                    <div class="dashboard-mini">
+
+                    </div>
+                    <div class="dashboard-mini">
+
+                    </div>
+                    <div class="dashboard-mini">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     {% endblock %}
 </div>
 </body>

@@ -1,0 +1,17 @@
+class Test:
+
+    def __init__(self, *a, **kw):
+        self.a = a 
+        self.kw = kw
+
+    def compute():
+        rv = self.a + self.kw
+        return rv
+
+
+x = Test(10,20)
+
+print('Value is:', x.compute)
+
+
+

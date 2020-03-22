@@ -37,14 +37,13 @@ class AuthenticationController extends Controller
     {
         $email = trim($request->request->get('email'));
         $password = trim($request->request->get('password'));
-        $encryptedPass = md5($password);
+
 
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository('WebsiteBundle:User');
         $user = $repo->findOneBy(
             [
                 'email' => $email,
-             'password' => $encryptedPass
 
             ]);
 
@@ -52,14 +51,21 @@ class AuthenticationController extends Controller
             $success = false;
             return
                 [
-                    'success'=>$success
+                    'success' => $success
                 ];
         }
+        elseif (password_verify($password, $user->getPassword())) {
+            $session->set('user', $user->getId());
 
-        $session->set('user', $user->getId());
+            $url = $this->generateUrl('home');
+            return $this->redirect($url);
+        }
 
-        $url = $this->generateUrl('home');
-        return $this->redirect($url);
+        return
+            [
+                'message'=>'Please enter correct password'
+            ];
+
     }
 
     /**
@@ -91,7 +97,7 @@ class AuthenticationController extends Controller
                 $password) && $name !=
             '' &&
             filter_var($email, FILTER_VALIDATE_EMAIL) && $surname != '') {
-            $encryptedPass = md5($password);
+            $encryptedPass = password_hash($password, PASSWORD_BCRYPT);
             $user = new User();
             $user->setName($name);
             $user->setSurname($surname);

@@ -11,6 +11,8 @@ buttons.forEach(function (elem) {
     })
 });
 
+
+
 document.querySelector('#button-edit-product').addEventListener('click', function (e) {
     const hiddenForm = document.querySelector('.hidden-form');
     if (hiddenForm.style.display === 'block') {
